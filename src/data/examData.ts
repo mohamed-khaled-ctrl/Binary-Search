@@ -10,419 +10,443 @@ export interface Question {
 
 export const examQuestions: Question[] = [
   {
-  id: 1,
-  question: "Which symbol represents the start or end of a flowchart?",
+  id: 1, 
+  question: "What is an algorithm?", 
   code: ``,
-  language: "",
+  language: "", 
   options: [
-    "Rectangle",
-    "Oval",
-    "Diamond",
-    "Parallelogram"
-  ],
-  correctAnswer: 1,
-  explanation: "The start and end of a flowchart are represented by an Oval symbol."
+    "A programming language",
+    "Step-by-step procedure to solve a problem",
+    "A type of hardware",
+    "None of the above"
+  ], 
+  correctAnswer: 1, 
+  explanation: "An algorithm is a finite, step-by-step procedure to solve a problem."
 },
+
 {
-  id: 2,
-  question: "The decision-making symbol in a flowchart is:",
+  id: 2, 
+  question: "Which of the following is NOT a property of an algorithm?", 
   code: ``,
-  language: "",
+  language: "", 
   options: [
-    "Oval",
-    "Rectangle",
-    "Diamond",
-    "Arrow"
-  ],
-  correctAnswer: 2,
-  explanation: "A Diamond shape is used in flowcharts to represent decision-making."
+    "Finiteness",
+    "Definiteness",
+    "Ambiguity",
+    "Input/Output"
+  ], 
+  correctAnswer: 2, 
+  explanation: "Algorithms must be finite, definite, and have input/output. Ambiguity is not a property."
 },
+
 {
-  id: 3,
-  question: "Which symbol is used to represent input/output?",
+  id: 3, 
+  question: "The efficiency of an algorithm is usually measured in terms of:", 
   code: ``,
-  language: "",
+  language: "", 
   options: [
-    "Rectangle",
-    "Parallelogram",
-    "Diamond",
-    "Circle"
-  ],
-  correctAnswer: 1,
-  explanation: "A Parallelogram is used to denote input/output operations in a flowchart."
+    "Programming language",
+    "Memory and time",
+    "Hardware used",
+    "Number of variables"
+  ], 
+  correctAnswer: 1, 
+  explanation: "Efficiency is measured by analyzing time and memory usage."
 },
+
 {
-  id: 4,
-  question: "The processing step in a flowchart is represented by:",
+  id: 4, 
+  question: "Which of these describes the complexity of an algorithm?", 
   code: ``,
-  language: "",
+  language: "", 
   options: [
-    "Oval",
-    "Parallelogram",
-    "Rectangle",
-    "Diamond"
-  ],
-  correctAnswer: 2,
-  explanation: "A Rectangle represents a processing step in a flowchart."
+    "Execution time only",
+    "Memory usage only",
+    "Both execution time and memory usage",
+    "Syntax errors"
+  ], 
+  correctAnswer: 2, 
+  explanation: "Algorithm complexity considers both time and memory requirements."
 },
+
 {
-  id: 5,
-  question: "A connector in a flowchart is used for:",
+  id: 5, 
+  question: "A step-by-step solution to a problem is often expressed in:", 
   code: ``,
-  language: "",
+  language: "", 
   options: [
-    "Performing calculations",
-    "Indicating start/end",
-    "Connecting different parts of a flowchart",
-    "Taking decisions"
-  ],
-  correctAnswer: 2,
-  explanation: "A connector is used to connect different parts of a flowchart for clarity."
+    "Flowchart",
+    "Pseudocode",
+    "Programming language",
+    "All of the above"
+  ], 
+  correctAnswer: 3, 
+  explanation: "Solutions can be expressed using flowcharts, pseudocode, or programming languages."
 },
+
 {
-  id: 6,
-  question: "Which symbol is not standard in flowcharts?",
+  id: 6, 
+  question: "Which sorting algorithm is the simplest to implement but least efficient for large lists?", 
   code: ``,
-  language: "",
+  language: "", 
   options: [
-    "Oval",
-    "Star",
-    "Rectangle",
-    "Diamond"
-  ],
-  correctAnswer: 1,
-  explanation: "A Star is not a standard flowchart symbol."
+    "Quick Sort",
+    "Merge Sort",
+    "Bubble Sort",
+    "Heap Sort"
+  ], 
+  correctAnswer: 2, 
+  explanation: "Bubble Sort is simple but inefficient for large inputs due to O(n²) complexity."
 },
+
 {
-  id: 7,
-  question: "A flowchart must always start with:",
+  id: 7, 
+  question: "Which sorting algorithm has the best average-case complexity?", 
   code: ``,
-  language: "",
+  language: "", 
   options: [
-    "Input symbol",
-    "Start symbol",
-    "Decision symbol",
-    "Processing symbol"
-  ],
-  correctAnswer: 1,
-  explanation: "Every flowchart begins with a Start symbol, usually represented by an Oval."
+    "Bubble Sort",
+    "Insertion Sort",
+    "Quick Sort",
+    "Selection Sort"
+  ], 
+  correctAnswer: 2, 
+  explanation: "Quick Sort has an average-case time complexity of O(n log n), better than others listed."
 },
+
 {
-  id: 8,
-  question: "What is the main purpose of a flowchart?",
+  id: 8, 
+  question: "What is the worst-case time complexity of Bubble Sort?", 
   code: ``,
-  language: "",
+  language: "", 
   options: [
-    "Show programming syntax",
-    "Represent logic visually",
-    "Execute code",
-    "Store data"
-  ],
-  correctAnswer: 1,
-  explanation: "The purpose of a flowchart is to visually represent the logic of a process."
+    "O(n)",
+    "O(n²)",
+    "O(log n)",
+    "O(n log n)"
+  ], 
+  correctAnswer: 1, 
+  explanation: "Bubble Sort’s worst-case complexity is O(n²) when the list is in reverse order."
 },
+
 {
-  id: 9,
-  question: "Which symbol would you use to add two numbers?",
+  id: 9, 
+  question: "Merge Sort is an example of which type of algorithm?", 
   code: ``,
-  language: "",
+  language: "", 
   options: [
-    "Rectangle",
-    "Diamond",
-    "Parallelogram",
-    "Oval"
-  ],
-  correctAnswer: 0,
-  explanation: "Adding two numbers is a processing step, represented by a Rectangle."
+    "Divide and Conquer",
+    "Greedy",
+    "Dynamic Programming",
+    "Brute Force"
+  ], 
+  correctAnswer: 0, 
+  explanation: "Merge Sort follows the divide and conquer approach to break down problems."
 },
+
 {
-  id: 10,
-  question: "If a condition is true, the arrow in a decision symbol typically points:",
+  id: 10, 
+  question: "Which sorting algorithm is stable?", 
   code: ``,
-  language: "",
+  language: "", 
   options: [
-    "Left",
-    "Down or Right",
-    "Up",
-    "Anywhere"
-  ],
-  correctAnswer: 1,
-  explanation: "In a flowchart, decision outputs usually branch Down or Right when true."
+    "Quick Sort",
+    "Selection Sort",
+    "Merge Sort",
+    "Heap Sort"
+  ], 
+  correctAnswer: 2, 
+  explanation: "Merge Sort is stable as it preserves the relative order of equal elements."
 },
   {
-  id: 11,
-  question: "Flowcharts are mainly used to:",
+  id: 11, 
+  question: "Which searching algorithm works only on sorted arrays?", 
   code: ``,
   language: "",
   options: [
-    "Debug programs automatically",
-    "Represent algorithm visually",
-    "Compile code",
-    "Store data"
-  ],
-  correctAnswer: 1,
-  explanation: "Flowcharts visually represent the steps of an algorithm, making it easier to understand the logic."
+    "Linear Search",
+    "Binary Search",
+    "Hashing",
+    "Breadth-First Search"
+  ], 
+  correctAnswer: 1, 
+  explanation: "Binary Search requires the array to be sorted to work correctly."
 },
+
 {
-  id: 12,
-  question: "Which of the following is true?",
+  id: 12, 
+  question: "What is the time complexity of Binary Search?", 
   code: ``,
   language: "",
   options: [
-    "A flowchart can have multiple start symbols",
-    "A flowchart can have multiple end symbols",
-    "Arrows can be crossed freely",
-    "Input/output symbols are optional"
-  ],
-  correctAnswer: 1,
-  explanation: "A flowchart must have only one start but can have multiple ends for different outcomes."
+    "O(n)",
+    "O(log n)",
+    "O(n²)",
+    "O(1)"
+  ], 
+  correctAnswer: 1, 
+  explanation: "Binary Search divides the array in half each step, resulting in O(log n) complexity."
 },
+
 {
-  id: 13,
-  question: "What does a loop in a flowchart usually include?",
+  id: 13, 
+  question: "Linear Search is best suited for:", 
   code: ``,
   language: "",
   options: [
-    "Start and End symbols only",
-    "Decision symbol",
-    "Only rectangle",
-    "Only parallelogram"
-  ],
-  correctAnswer: 1,
-  explanation: "Loops require a decision symbol to check whether to continue or exit the loop."
+    "Large sorted arrays",
+    "Small or unsorted arrays",
+    "Trees",
+    "Graphs"
+  ], 
+  correctAnswer: 1, 
+  explanation: "Linear Search is efficient only for small datasets or unsorted arrays."
 },
+
 {
-  id: 14,
-  question: "In a flowchart, arrows represent:",
+  id: 14, 
+  question: "Hashing provides searching in:", 
   code: ``,
   language: "",
   options: [
-    "Sequence of execution",
-    "Input values",
-    "Output values",
-    "Error messages"
-  ],
-  correctAnswer: 0,
-  explanation: "Arrows show the flow and sequence of execution in a flowchart."
+    "O(n)",
+    "O(log n)",
+    "O(1)",
+    "O(n²)"
+  ], 
+  correctAnswer: 2, 
+  explanation: "Hashing allows constant time O(1) searching on average."
 },
+
 {
-  id: 15,
-  question: "Which flowchart symbol would represent *reading a number from the user*?",
+  id: 15, 
+  question: "Which searching method is recursive by nature?", 
   code: ``,
   language: "",
   options: [
-    "Rectangle",
-    "Diamond",
-    "Parallelogram",
-    "Circle"
-  ],
-  correctAnswer: 2,
-  explanation: "A parallelogram is used to represent input/output operations such as reading a number."
+    "Linear Search",
+    "Binary Search",
+    "Hashing",
+    "None of the above"
+  ], 
+  correctAnswer: 1, 
+  explanation: "Binary Search can be naturally implemented using recursion."
 },
+
 {
-  id: 16,
-  question: "To display results, you use:",
+  id: 16, 
+  question: "What is the best case complexity of Quick Sort?", 
   code: ``,
   language: "",
   options: [
-    "Rectangle",
-    "Parallelogram",
-    "Diamond",
-    "Oval"
-  ],
-  correctAnswer: 1,
-  explanation: "A parallelogram represents output, so it is used to display results."
+    "O(n²)",
+    "O(n log n)",
+    "O(log n)",
+    "O(n)"
+  ], 
+  correctAnswer: 1, 
+  explanation: "In the best case, Quick Sort partitions the array evenly, achieving O(n log n)."
 },
+
 {
-  id: 17,
-  question: "Which step is optional in a flowchart?",
+  id: 17, 
+  question: "What is the worst case complexity of Quick Sort?", 
   code: ``,
   language: "",
   options: [
-    "Start",
-    "Processing",
-    "Decision",
-    "Connector"
-  ],
-  correctAnswer: 3,
-  explanation: "Connectors are optional and mainly used to simplify complex flowcharts."
+    "O(n)",
+    "O(n²)",
+    "O(n log n)",
+    "O(log n)"
+  ], 
+  correctAnswer: 1, 
+  explanation: "If partitions are highly unbalanced, Quick Sort degrades to O(n²)."
 },
+
 {
-  id: 18,
-  question: "True or False: Flowcharts can have arrows pointing backwards to create loops.",
+  id: 18, 
+  question: "Which complexity is faster: O(n log n) or O(n²)?", 
   code: ``,
   language: "",
   options: [
-    "True",
-    "False"
-  ],
-  correctAnswer: 0,
-  explanation: "Backward arrows are allowed to represent loops in flowcharts."
+    "O(n log n)",
+    "O(n²)",
+    "Both are same",
+    "Cannot decide"
+  ], 
+  correctAnswer: 0, 
+  explanation: "O(n log n) grows slower than O(n²), so it is faster for large inputs."
 },
+
 {
-  id: 19,
-  question: "A flowchart that uses many decisions is likely representing:",
+  id: 19, 
+  question: "What does “Big O” notation represent?", 
   code: ``,
   language: "",
   options: [
-    "A simple calculation",
-    "A complex algorithm",
-    "Only input/output",
-    "Only start/end"
-  ],
-  correctAnswer: 1,
-  explanation: "Many decision points indicate branching, typical of complex algorithms."
+    "Space complexity only",
+    "Time complexity only",
+    "Upper bound of algorithm efficiency",
+    "Lower bound of algorithm efficiency"
+  ], 
+  correctAnswer: 2, 
+  explanation: "Big O gives the upper bound on the growth rate of an algorithm’s complexity."
 },
+
 {
-  id: 20,
-  question: "What is the correct sequence of a simple flowchart?",
+  id: 20, 
+  question: "Which algorithm has exponential complexity?", 
   code: ``,
   language: "",
   options: [
-    "Start → Process → Input → Decision → End",
-    "Start → Input → Process → Decision → End",
-    "Decision → Start → Process → End → Input",
-    "Input → Decision → Process → End → Start"
-  ],
-  correctAnswer: 1,
-  explanation: "The logical order is Start, then Input, then Process, followed by Decision, and finally End."
-},{
+    "Merge Sort",
+    "Fibonacci recursive solution",
+    "Binary Search",
+    "Quick Sort"
+  ], 
+  correctAnswer: 1, 
+  explanation: "The naive recursive Fibonacci solution has exponential time complexity."
+}
+,
+{
   id: 21,
-  question: "Which of the following is not a property of flowcharts?",
+  question: "Which algorithmic paradigm chooses the best option at each step?",
   code: ``,
   language: "",
   options: [
-    "Easy to understand",
-    "Visual representation",
-    "Can execute code automatically",
-    "Shows logical flow"
+    "Divide & Conquer",
+    "Dynamic Programming",
+    "Greedy",
+    "Backtracking"
   ],
   correctAnswer: 2,
-  explanation: "Flowcharts are for visualization and design; they cannot execute code automatically."
+  explanation: "The greedy paradigm makes the locally optimal choice at each step with the hope of reaching a global optimum."
 },
 {
   id: 22,
-  question: "Flowcharts are useful for programmers because they:",
+  question: "Dijkstra’s algorithm is an example of:",
   code: ``,
   language: "",
   options: [
-    "Make coding faster",
-    "Help design algorithms",
-    "Replace programming languages",
-    "Reduce memory usage"
+    "Greedy",
+    "Divide & Conquer",
+    "Dynamic Programming",
+    "Brute Force"
   ],
-  correctAnswer: 1,
-  explanation: "Flowcharts help programmers plan and design algorithms before coding."
+  correctAnswer: 0,
+  explanation: "Dijkstra’s algorithm repeatedly selects the nearest unvisited node, which is a greedy approach."
 },
 {
   id: 23,
-  question: "Which symbol is used to call another process or subroutine?",
+  question: "Merge Sort follows which paradigm?",
   code: ``,
   language: "",
   options: [
-    "Rectangle with double-struck sides",
-    "Diamond",
-    "Parallelogram",
-    "Oval"
+    "Greedy",
+    "Divide & Conquer",
+    "Dynamic Programming",
+    "Brute Force"
   ],
-  correctAnswer: 0,
-  explanation: "A rectangle with double-struck sides is used to represent a predefined process or subroutine."
+  correctAnswer: 1,
+  explanation: "Merge Sort divides the array into halves, recursively sorts them, and then merges the results, which is divide and conquer."
 },
 {
   id: 24,
-  question: "How many arrows can a decision symbol have?",
+  question: "Which of these problems can be solved efficiently using Greedy algorithm?",
   code: ``,
   language: "",
   options: [
-    "1",
-    "2 or more",
-    "3 only",
-    "None"
+    "Knapsack (0/1)",
+    "Fractional Knapsack",
+    "Fibonacci",
+    "Tower of Hanoi"
   ],
   correctAnswer: 1,
-  explanation: "A decision symbol usually has two or more arrows for different possible outcomes."
+  explanation: "Fractional Knapsack allows taking fractions of items, making a greedy choice optimal."
 },
 {
   id: 25,
-  question: "Which symbol represents manual operation?",
+  question: "Divide & Conquer works by:",
   code: ``,
   language: "",
   options: [
-    "Trapezoid",
-    "Diamond",
-    "Parallelogram",
-    "Rectangle"
+    "Solving smaller sub-problems and combining results",
+    "Choosing optimal steps",
+    "Using recursion only",
+    "Iterating through all options"
   ],
   correctAnswer: 0,
-  explanation: "A trapezoid shape is used to represent a manual operation in a flowchart."
+  explanation: "Divide and Conquer breaks a problem into smaller sub-problems, solves them, and then combines the results."
 },
 {
   id: 26,
-  question: "A flowchart showing steps of a vending machine would likely include:",
+  question: "Which algorithm is used to find shortest path in a weighted graph?",
   code: ``,
   language: "",
   options: [
-    "Only start and end",
-    "Decisions for choice of product",
-    "Only rectangles",
-    "Only input/output"
+    "BFS",
+    "DFS",
+    "Dijkstra",
+    "Linear Search"
   ],
-  correctAnswer: 1,
-  explanation: "A vending machine flowchart would require decision symbols to handle product choices."
+  correctAnswer: 2,
+  explanation: "Dijkstra’s algorithm efficiently finds the shortest path in weighted graphs with non-negative weights."
 },
 {
   id: 27,
-  question: "What type of flowchart shows program structure?",
+  question: "Dynamic Programming is best for problems with:",
   code: ``,
   language: "",
   options: [
-    "System flowchart",
-    "Program flowchart",
-    "Process flowchart",
-    "Data flowchart"
+    "Overlapping subproblems",
+    "No subproblems",
+    "Recursive only",
+    "Constant time"
   ],
-  correctAnswer: 1,
-  explanation: "A program flowchart specifically shows the structure and logic of a program."
+  correctAnswer: 0,
+  explanation: "Dynamic Programming solves problems with overlapping subproblems by storing and reusing previous results."
 },
 {
   id: 28,
-  question: "True or False: All flowcharts must have a single end symbol.",
+  question: "Which of these is a greedy algorithm?",
   code: ``,
   language: "",
   options: [
-    "True",
-    "False"
+    "Huffman coding",
+    "Merge Sort",
+    "Quick Sort",
+    "Linear Search"
   ],
-  correctAnswer: 1,
-  explanation: "Flowcharts can have multiple end symbols depending on the number of possible outcomes."
+  correctAnswer: 0,
+  explanation: "Huffman coding builds the optimal prefix code by repeatedly choosing the smallest frequency nodes, a greedy approach."
 },
 {
   id: 29,
-  question: "The arrow connecting symbols should:",
+  question: "Backtracking is commonly used in:",
   code: ``,
   language: "",
   options: [
-    "Point from next to previous",
-    "Be dashed",
-    "Show direction of flow",
-    "Be optional"
+    "Graph traversal",
+    "Puzzle solving (like Sudoku)",
+    "Sorting arrays",
+    "Hashing"
   ],
-  correctAnswer: 2,
-  explanation: "Arrows in a flowchart always show the direction of logical flow."
+  correctAnswer: 1,
+  explanation: "Backtracking explores possible solutions and backtracks when a solution is not feasible, making it useful in puzzles like Sudoku."
 },
 {
   id: 30,
-  question: "Flowcharting helps to reduce errors in:",
+  question: "Which of the following is a divide and conquer algorithm?",
   code: ``,
   language: "",
   options: [
-    "Logic design",
-    "Hardware setup",
-    "Keyboard typing",
-    "Internet speed"
+    "Binary Search",
+    "Bubble Sort",
+    "Linear Search",
+    "Hashing"
   ],
   correctAnswer: 0,
-  explanation: "Flowcharts clarify logic before coding, reducing errors in logic design."
+  explanation: "Binary Search divides the search space in half at each step, which is divide and conquer."
 }
 ];
 
