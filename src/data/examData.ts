@@ -306,7 +306,153 @@ int main() {
     ],
     correctAnswer: 0,
     explanation: "Global variables exist and can be accessed throughout the entire program."
-  }
+  },{
+  id: 21,
+  question: "What will this pseudo code print?",
+  code: `Procedure Sum(a, b)
+    Return a + b
+EndProcedure
+
+x = Call Sum(2, 3)
+Print x`,
+  language: "pseudocode",
+  options: [
+    "2",
+    "3",
+    "5",
+    "Error"
+  ],
+  correctAnswer: 2,
+  explanation: "The procedure returns 2 + 3 = 5."
+},
+{
+  id: 22,
+  question: "Which of these is a valid recursive factorial function in pseudo code?",
+  options: [
+    "Procedure Fact(n) If n=0 Then Return 1 Else Return n*Fact(n-1)",
+    "Procedure Fact(n) Print n",
+    "Procedure Fact(n) Return n+n",
+    "Procedure Fact(n) Return 1"
+  ],
+  correctAnswer: 0,
+  explanation: "Factorial is defined recursively: n! = n * (n-1)!, with base case Fact(0)=1."
+},
+{
+  id: 23,
+  question: "What is the output of this code?",
+  code: `#include<stdio.h>
+int square(int n) {
+    return n*n;
+}
+int main() {
+    printf("%d", square(4));
+    return 0;
+}`,
+  language: "c",
+  options: [
+    "8",
+    "16",
+    "4",
+    "0"
+  ],
+  correctAnswer: 1,
+  explanation: "square(4) returns 4*4 = 16."
+},
+{
+  id: 24,
+  question: "Which of the following best describes a pseudo code?",
+  options: [
+    "A programming language",
+    "A high-level description of an algorithm",
+    "Hardware",
+    "Compiler"
+  ],
+  correctAnswer: 1,
+  explanation: "Pseudo code is a simplified, high-level description of an algorithm."
+},
+{
+  id: 25,
+  question: "In pseudo code, which of the following is used to stop a loop?",
+  options: [
+    "Break",
+    "Exit",
+    "StopLoop",
+    "Continue"
+  ],
+  correctAnswer: 0,
+  explanation: "The 'Break' statement is used to terminate a loop."
+},
+{
+  id: 26,
+  question: "Which function type always returns a value?",
+  options: [
+    "Procedure",
+    "Function",
+    "Main",
+    "Void"
+  ],
+  correctAnswer: 1,
+  explanation: "Functions always return a value, unlike procedures."
+},
+{
+  id: 27,
+  question: "What will be printed?",
+  code: `Procedure Swap(a, b)
+    temp = a
+    a = b
+    b = temp
+EndProcedure
+
+x = 5
+y = 10
+Call Swap(x, y)
+Print x, y`,
+  language: "pseudocode",
+  options: [
+    "10 5",
+    "5 10",
+    "0 0",
+    "Error"
+  ],
+  correctAnswer: 1,
+  explanation: "Parameters are passed by value, so x and y remain unchanged. Output: 5 10."
+},
+{
+  id: 28,
+  question: "Which of these pseudo code statements calls a function?",
+  options: [
+    "Call Sum(5, 10)",
+    "Function Sum(a, b)",
+    "Procedure Sum(a, b)",
+    "Declare Sum(a, b)"
+  ],
+  correctAnswer: 0,
+  explanation: "'Call Sum(5,10)' actually executes the function."
+},
+{
+  id: 29,
+  question: "Which of the following is not correct about recursive functions?",
+  options: [
+    "Must have a base case",
+    "Can call themselves",
+    "Always faster than loops",
+    "Can consume stack memory"
+  ],
+  correctAnswer: 2,
+  explanation: "Recursion is not always faster; in fact, it can be slower than loops."
+},
+{
+  id: 30,
+  question: "Which of the following best describes modular programming?",
+  options: [
+    "Breaking programs into functions/procedures",
+    "Writing all code in main",
+    "Using only global variables",
+    "Avoiding functions"
+  ],
+  correctAnswer: 0,
+  explanation: "Modular programming involves breaking a program into smaller functions/procedures."
+}
 ];
 
 export const examConfig = {
