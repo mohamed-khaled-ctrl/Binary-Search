@@ -427,7 +427,7 @@ export const examQuestions: Question[] = [
 ];
 
 export const examConfig = {
-  title: "Functions & Pseudo Code",
+  title: "flowchart",
   duration: 30, // minutes
   totalQuestions: examQuestions.length,
   passingScore: 60 // percentage
