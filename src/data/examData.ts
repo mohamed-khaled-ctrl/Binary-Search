@@ -10,448 +10,419 @@ export interface Question {
 
 export const examQuestions: Question[] = [
   {
-    id: 1,
-    question: "Which of the following is the correct syntax to define a function in C++?",
-    options: [
-      "function int sum(int a, int b) {}",
-      "int sum(int a, int b) {}",
-      "def sum(a, b):",
-      "int sum = (int a, int b) {}"
-    ],
-    correctAnswer: 1,
-    explanation: "In C++, functions are defined with return type followed by function name and parameters in parentheses."
-  },
-  {
-    id: 2,
-    question: "What is the return type of a function that does not return any value?",
-    options: [
-      "void",
-      "int",
-      "char",
-      "null"
-    ],
-    correctAnswer: 0,
-    explanation: "The 'void' keyword is used to indicate that a function does not return any value."
-  },
-  {
-    id: 3,
-    question: "What will be printed by the following code?",
-    code: `#include <stdio.h>
-int add(int a, int b) {
-    return a + b;
-}
-int main() {
-    printf("%d", add(2, 3));
-    return 0;
-}`,
-    language: "c",
-    options: [
-      "23",
-      "5",
-      "2",
-      "Compilation Error"
-    ],
-    correctAnswer: 1,
-    explanation: "The add function returns the sum of 2 and 3, which is 5."
-  },
-  {
-    id: 4,
-    question: "Which of the following is not a valid function call in C++?",
-    options: [
-      "sum(5, 10);",
-      "sum();",
-      "sum(,5);",
-      "sum(a, b);"
-    ],
-    correctAnswer: 2,
-    explanation: "Function calls cannot have empty parameters separated by commas. sum(,5) is invalid syntax."
-  },
-  {
-    id: 5,
-    question: "What is the output of this pseudo code?",
-    code: `Procedure Test(x)
-    x = x + 5
-    Print x
-EndProcedure
-
-Call Test(10)`,
-    language: "pseudocode",
-    options: [
-      "5",
-      "10",
-      "15",
-      "Error"
-    ],
-    correctAnswer: 2,
-    explanation: "The procedure adds 5 to the input parameter (10), so 10 + 5 = 15."
-  },
-  {
-    id: 6,
-    question: "Which of the following is true about recursive functions?",
-    options: [
-      "Cannot call themselves",
-      "Must have a base case",
-      "Never need a return value",
-      "Always use loops"
-    ],
-    correctAnswer: 1,
-    explanation: "Recursive functions must have a base case to prevent infinite recursion."
-  },
-  {
-    id: 7,
-    question: "What is the purpose of a return statement in a function?",
-    options: [
-      "To stop execution of main",
-      "To return a value to the calling function",
-      "To print a value",
-      "To declare a variable"
-    ],
-    correctAnswer: 1,
-    explanation: "The return statement is used to return a value to the function that called it."
-  },
-  {
-    id: 8,
-    question: "What will the following pseudo code print?",
-    code: `Procedure CountDown(n)
-    If n > 0 Then
-        Print n
-        Call CountDown(n - 1)
-    EndIf
-EndProcedure
-
-Call CountDown(3)`,
-    language: "pseudocode",
-    options: [
-      "3 2 1",
-      "1 2 3",
-      "0 1 2",
-      "Infinite loop"
-    ],
-    correctAnswer: 0,
-    explanation: "This recursive function prints n then calls itself with n-1, printing 3, then 2, then 1."
-  },
-  {
-    id: 9,
-    question: "Which of the following is pass by reference in C++?",
-    options: [
-      "void swap(int a, int b)",
-      "void swap(int &a, int &b)",
-      "int swap(int a, int b)",
-      "int swap(int a, int &b)"
-    ],
-    correctAnswer: 1,
-    explanation: "The & symbol indicates pass by reference, allowing the function to modify the original variables."
-  },
-  {
-    id: 10,
-    question: "What is the output of:",
-    code: `#include <stdio.h>
-void fun() {
-    static int x = 0;
-    x++;
-    printf("%d ", x);
-}
-int main() {
-    fun();
-    fun();
-    fun();
-    return 0;
-}`,
-    language: "c",
-    options: [
-      "1 1 1",
-      "1 2 3",
-      "0 0 0",
-      "Compilation Error"
-    ],
-    correctAnswer: 1,
-    explanation: "Static variables retain their values between function calls, so x increments each time: 1, 2, 3."
-  },
-  {
-    id: 11,
-    question: "Which pseudo code statement declares a function without defining it?",
-    options: [
-      "Function Sum(a, b) {}",
-      "Declare Function Sum(a, b)",
-      "Call Sum(5, 10)",
-      "Print Sum"
-    ],
-    correctAnswer: 1,
-    explanation: "In pseudo code, 'Declare Function' is used to declare a function without defining it."
-  },
-  {
-    id: 12,
-    question: "Which of the following cannot be a function name in C++?",
-    options: [
-      "Sum",
-      "main",
-      "3DPrint",
-      "calculate"
-    ],
-    correctAnswer: 2,
-    explanation: "Identifiers in C++ cannot start with a digit, so '3DPrint' is invalid."
-  },
-  {
-    id: 13,
-    question: "What is the output?",
-    code: `Procedure Example(a)
-    a = a * 2
-EndProcedure
-
-x = 5
-Call Example(x)
-Print x`,
-    language: "pseudocode",
-    options: [
-      "5",
-      "10",
-      "Error",
-      "0"
-    ],
-    correctAnswer: 0,
-    explanation: "The parameter is passed by value, so 'x' remains 5 outside the procedure."
-  },
-  {
-    id: 14,
-    question: "Which of the following correctly represents a procedure in pseudo code?",
-    options: [
-      "Procedure Sum(a, b)",
-      "Function Sum(a, b) Returns int",
-      "Call Sum(a, b)",
-      "Print Sum(a, b)"
-    ],
-    correctAnswer: 0,
-    explanation: "'Procedure' is the keyword to define a procedure in pseudo code."
-  },
-  {
-    id: 15,
-    question: "Which of the following is a feature of functions?",
-    options: [
-      "Reusability",
-      "Modularity",
-      "Debugging ease",
-      "All of the above"
-    ],
-    correctAnswer: 3,
-    explanation: "Functions provide all of these benefits: reusability, modularity, and easier debugging."
-  },
-  {
-    id: 16,
-    question: "Which of the following best describes a parameter?",
-    options: [
-      "A variable passed to a function",
-      "A function name",
-      "A value returned by a function",
-      "A type of loop"
-    ],
-    correctAnswer: 0,
-    explanation: "A parameter is a variable used to pass information into a function."
-  },
-  {
-    id: 17,
-    question: "What will be the output of this C++ code?",
-    code: `#include <iostream>
-using namespace std;
-
-void fun(int a=5) {
-    cout << a;
-}
-int main() {
-    fun();
-    fun(10);
-    return 0;
-}`,
-    language: "cpp",
-    options: [
-      "510",
-      "15",
-      "105",
-      "55"
-    ],
-    correctAnswer: 0,
-    explanation: "The first call uses the default parameter (5), the second uses 10, so output is 510."
-  },
-  {
-    id: 18,
-    question: "What is the main difference between a function and a procedure in pseudo code?",
-    options: [
-      "Function returns a value; procedure does not",
-      "Procedure returns a value; function does not",
-      "Functions cannot be called",
-      "Procedures are only for loops"
-    ],
-    correctAnswer: 0,
-    explanation: "Functions return values, whereas procedures do not."
-  },
-  {
-    id: 19,
-    question: "Which statement is true about local variables?",
-    options: [
-      "Exist only inside the function where declared",
-      "Exist globally",
-      "Can be accessed outside the function",
-      "Cannot be used inside functions"
-    ],
-    correctAnswer: 0,
-    explanation: "Local variables exist only within the function scope where they are declared."
-  },
-  {
-    id: 20,
-    question: "Which statement is true about global variables?",
-    options: [
-      "Exist for the whole program",
-      "Only exist in main",
-      "Cannot be used in functions",
-      "Are automatically constants"
-    ],
-    correctAnswer: 0,
-    explanation: "Global variables exist and can be accessed throughout the entire program."
-  },{
-  id: 21,
-  question: "What will this pseudo code print?",
-  code: `Procedure Sum(a, b)
-    Return a + b
-EndProcedure
-
-x = Call Sum(2, 3)
-Print x`,
-  language: "pseudocode",
+  id: 1,
+  question: "Which symbol represents the start or end of a flowchart?",
+  code: ``,
+  language: "",
   options: [
-    "2",
-    "3",
-    "5",
-    "Error"
+    "Rectangle",
+    "Oval",
+    "Diamond",
+    "Parallelogram"
+  ],
+  correctAnswer: 1,
+  explanation: "The start and end of a flowchart are represented by an Oval symbol."
+},
+{
+  id: 2,
+  question: "The decision-making symbol in a flowchart is:",
+  code: ``,
+  language: "",
+  options: [
+    "Oval",
+    "Rectangle",
+    "Diamond",
+    "Arrow"
   ],
   correctAnswer: 2,
-  explanation: "The procedure returns 2 + 3 = 5."
+  explanation: "A Diamond shape is used in flowcharts to represent decision-making."
+},
+{
+  id: 3,
+  question: "Which symbol is used to represent input/output?",
+  code: ``,
+  language: "",
+  options: [
+    "Rectangle",
+    "Parallelogram",
+    "Diamond",
+    "Circle"
+  ],
+  correctAnswer: 1,
+  explanation: "A Parallelogram is used to denote input/output operations in a flowchart."
+},
+{
+  id: 4,
+  question: "The processing step in a flowchart is represented by:",
+  code: ``,
+  language: "",
+  options: [
+    "Oval",
+    "Parallelogram",
+    "Rectangle",
+    "Diamond"
+  ],
+  correctAnswer: 2,
+  explanation: "A Rectangle represents a processing step in a flowchart."
+},
+{
+  id: 5,
+  question: "A connector in a flowchart is used for:",
+  code: ``,
+  language: "",
+  options: [
+    "Performing calculations",
+    "Indicating start/end",
+    "Connecting different parts of a flowchart",
+    "Taking decisions"
+  ],
+  correctAnswer: 2,
+  explanation: "A connector is used to connect different parts of a flowchart for clarity."
+},
+{
+  id: 6,
+  question: "Which symbol is not standard in flowcharts?",
+  code: ``,
+  language: "",
+  options: [
+    "Oval",
+    "Star",
+    "Rectangle",
+    "Diamond"
+  ],
+  correctAnswer: 1,
+  explanation: "A Star is not a standard flowchart symbol."
+},
+{
+  id: 7,
+  question: "A flowchart must always start with:",
+  code: ``,
+  language: "",
+  options: [
+    "Input symbol",
+    "Start symbol",
+    "Decision symbol",
+    "Processing symbol"
+  ],
+  correctAnswer: 1,
+  explanation: "Every flowchart begins with a Start symbol, usually represented by an Oval."
+},
+{
+  id: 8,
+  question: "What is the main purpose of a flowchart?",
+  code: ``,
+  language: "",
+  options: [
+    "Show programming syntax",
+    "Represent logic visually",
+    "Execute code",
+    "Store data"
+  ],
+  correctAnswer: 1,
+  explanation: "The purpose of a flowchart is to visually represent the logic of a process."
+},
+{
+  id: 9,
+  question: "Which symbol would you use to add two numbers?",
+  code: ``,
+  language: "",
+  options: [
+    "Rectangle",
+    "Diamond",
+    "Parallelogram",
+    "Oval"
+  ],
+  correctAnswer: 0,
+  explanation: "Adding two numbers is a processing step, represented by a Rectangle."
+},
+{
+  id: 10,
+  question: "If a condition is true, the arrow in a decision symbol typically points:",
+  code: ``,
+  language: "",
+  options: [
+    "Left",
+    "Down or Right",
+    "Up",
+    "Anywhere"
+  ],
+  correctAnswer: 1,
+  explanation: "In a flowchart, decision outputs usually branch Down or Right when true."
+},
+  {
+  id: 11,
+  question: "Flowcharts are mainly used to:",
+  code: ``,
+  language: "",
+  options: [
+    "Debug programs automatically",
+    "Represent algorithm visually",
+    "Compile code",
+    "Store data"
+  ],
+  correctAnswer: 1,
+  explanation: "Flowcharts visually represent the steps of an algorithm, making it easier to understand the logic."
+},
+{
+  id: 12,
+  question: "Which of the following is true?",
+  code: ``,
+  language: "",
+  options: [
+    "A flowchart can have multiple start symbols",
+    "A flowchart can have multiple end symbols",
+    "Arrows can be crossed freely",
+    "Input/output symbols are optional"
+  ],
+  correctAnswer: 1,
+  explanation: "A flowchart must have only one start but can have multiple ends for different outcomes."
+},
+{
+  id: 13,
+  question: "What does a loop in a flowchart usually include?",
+  code: ``,
+  language: "",
+  options: [
+    "Start and End symbols only",
+    "Decision symbol",
+    "Only rectangle",
+    "Only parallelogram"
+  ],
+  correctAnswer: 1,
+  explanation: "Loops require a decision symbol to check whether to continue or exit the loop."
+},
+{
+  id: 14,
+  question: "In a flowchart, arrows represent:",
+  code: ``,
+  language: "",
+  options: [
+    "Sequence of execution",
+    "Input values",
+    "Output values",
+    "Error messages"
+  ],
+  correctAnswer: 0,
+  explanation: "Arrows show the flow and sequence of execution in a flowchart."
+},
+{
+  id: 15,
+  question: "Which flowchart symbol would represent *reading a number from the user*?",
+  code: ``,
+  language: "",
+  options: [
+    "Rectangle",
+    "Diamond",
+    "Parallelogram",
+    "Circle"
+  ],
+  correctAnswer: 2,
+  explanation: "A parallelogram is used to represent input/output operations such as reading a number."
+},
+{
+  id: 16,
+  question: "To display results, you use:",
+  code: ``,
+  language: "",
+  options: [
+    "Rectangle",
+    "Parallelogram",
+    "Diamond",
+    "Oval"
+  ],
+  correctAnswer: 1,
+  explanation: "A parallelogram represents output, so it is used to display results."
+},
+{
+  id: 17,
+  question: "Which step is optional in a flowchart?",
+  code: ``,
+  language: "",
+  options: [
+    "Start",
+    "Processing",
+    "Decision",
+    "Connector"
+  ],
+  correctAnswer: 3,
+  explanation: "Connectors are optional and mainly used to simplify complex flowcharts."
+},
+{
+  id: 18,
+  question: "True or False: Flowcharts can have arrows pointing backwards to create loops.",
+  code: ``,
+  language: "",
+  options: [
+    "True",
+    "False"
+  ],
+  correctAnswer: 0,
+  explanation: "Backward arrows are allowed to represent loops in flowcharts."
+},
+{
+  id: 19,
+  question: "A flowchart that uses many decisions is likely representing:",
+  code: ``,
+  language: "",
+  options: [
+    "A simple calculation",
+    "A complex algorithm",
+    "Only input/output",
+    "Only start/end"
+  ],
+  correctAnswer: 1,
+  explanation: "Many decision points indicate branching, typical of complex algorithms."
+},
+{
+  id: 20,
+  question: "What is the correct sequence of a simple flowchart?",
+  code: ``,
+  language: "",
+  options: [
+    "Start → Process → Input → Decision → End",
+    "Start → Input → Process → Decision → End",
+    "Decision → Start → Process → End → Input",
+    "Input → Decision → Process → End → Start"
+  ],
+  correctAnswer: 1,
+  explanation: "The logical order is Start, then Input, then Process, followed by Decision, and finally End."
+},{
+  id: 21,
+  question: "Which of the following is not a property of flowcharts?",
+  code: ``,
+  language: "",
+  options: [
+    "Easy to understand",
+    "Visual representation",
+    "Can execute code automatically",
+    "Shows logical flow"
+  ],
+  correctAnswer: 2,
+  explanation: "Flowcharts are for visualization and design; they cannot execute code automatically."
 },
 {
   id: 22,
-  question: "Which of these is a valid recursive factorial function in pseudo code?",
+  question: "Flowcharts are useful for programmers because they:",
+  code: ``,
+  language: "",
   options: [
-    "Procedure Fact(n) If n=0 Then Return 1 Else Return n*Fact(n-1)",
-    "Procedure Fact(n) Print n",
-    "Procedure Fact(n) Return n+n",
-    "Procedure Fact(n) Return 1"
+    "Make coding faster",
+    "Help design algorithms",
+    "Replace programming languages",
+    "Reduce memory usage"
   ],
-  correctAnswer: 0,
-  explanation: "Factorial is defined recursively: n! = n * (n-1)!, with base case Fact(0)=1."
+  correctAnswer: 1,
+  explanation: "Flowcharts help programmers plan and design algorithms before coding."
 },
 {
   id: 23,
-  question: "What is the output of this code?",
-  code: `#include<stdio.h>
-int square(int n) {
-    return n*n;
-}
-int main() {
-    printf("%d", square(4));
-    return 0;
-}`,
-  language: "c",
+  question: "Which symbol is used to call another process or subroutine?",
+  code: ``,
+  language: "",
   options: [
-    "8",
-    "16",
-    "4",
-    "0"
+    "Rectangle with double-struck sides",
+    "Diamond",
+    "Parallelogram",
+    "Oval"
   ],
-  correctAnswer: 1,
-  explanation: "square(4) returns 4*4 = 16."
+  correctAnswer: 0,
+  explanation: "A rectangle with double-struck sides is used to represent a predefined process or subroutine."
 },
 {
   id: 24,
-  question: "Which of the following best describes a pseudo code?",
+  question: "How many arrows can a decision symbol have?",
+  code: ``,
+  language: "",
   options: [
-    "A programming language",
-    "A high-level description of an algorithm",
-    "Hardware",
-    "Compiler"
+    "1",
+    "2 or more",
+    "3 only",
+    "None"
   ],
   correctAnswer: 1,
-  explanation: "Pseudo code is a simplified, high-level description of an algorithm."
+  explanation: "A decision symbol usually has two or more arrows for different possible outcomes."
 },
 {
   id: 25,
-  question: "In pseudo code, which of the following is used to stop a loop?",
+  question: "Which symbol represents manual operation?",
+  code: ``,
+  language: "",
   options: [
-    "Break",
-    "Exit",
-    "StopLoop",
-    "Continue"
+    "Trapezoid",
+    "Diamond",
+    "Parallelogram",
+    "Rectangle"
   ],
   correctAnswer: 0,
-  explanation: "The 'Break' statement is used to terminate a loop."
+  explanation: "A trapezoid shape is used to represent a manual operation in a flowchart."
 },
 {
   id: 26,
-  question: "Which function type always returns a value?",
+  question: "A flowchart showing steps of a vending machine would likely include:",
+  code: ``,
+  language: "",
   options: [
-    "Procedure",
-    "Function",
-    "Main",
-    "Void"
+    "Only start and end",
+    "Decisions for choice of product",
+    "Only rectangles",
+    "Only input/output"
   ],
   correctAnswer: 1,
-  explanation: "Functions always return a value, unlike procedures."
+  explanation: "A vending machine flowchart would require decision symbols to handle product choices."
 },
 {
   id: 27,
-  question: "What will be printed?",
-  code: `Procedure Swap(a, b)
-    temp = a
-    a = b
-    b = temp
-EndProcedure
-
-x = 5
-y = 10
-Call Swap(x, y)
-Print x, y`,
-  language: "pseudocode",
+  question: "What type of flowchart shows program structure?",
+  code: ``,
+  language: "",
   options: [
-    "10 5",
-    "5 10",
-    "0 0",
-    "Error"
+    "System flowchart",
+    "Program flowchart",
+    "Process flowchart",
+    "Data flowchart"
   ],
   correctAnswer: 1,
-  explanation: "Parameters are passed by value, so x and y remain unchanged. Output: 5 10."
+  explanation: "A program flowchart specifically shows the structure and logic of a program."
 },
 {
   id: 28,
-  question: "Which of these pseudo code statements calls a function?",
+  question: "True or False: All flowcharts must have a single end symbol.",
+  code: ``,
+  language: "",
   options: [
-    "Call Sum(5, 10)",
-    "Function Sum(a, b)",
-    "Procedure Sum(a, b)",
-    "Declare Sum(a, b)"
+    "True",
+    "False"
   ],
-  correctAnswer: 0,
-  explanation: "'Call Sum(5,10)' actually executes the function."
+  correctAnswer: 1,
+  explanation: "Flowcharts can have multiple end symbols depending on the number of possible outcomes."
 },
 {
   id: 29,
-  question: "Which of the following is not correct about recursive functions?",
+  question: "The arrow connecting symbols should:",
+  code: ``,
+  language: "",
   options: [
-    "Must have a base case",
-    "Can call themselves",
-    "Always faster than loops",
-    "Can consume stack memory"
+    "Point from next to previous",
+    "Be dashed",
+    "Show direction of flow",
+    "Be optional"
   ],
   correctAnswer: 2,
-  explanation: "Recursion is not always faster; in fact, it can be slower than loops."
+  explanation: "Arrows in a flowchart always show the direction of logical flow."
 },
 {
   id: 30,
-  question: "Which of the following best describes modular programming?",
+  question: "Flowcharting helps to reduce errors in:",
+  code: ``,
+  language: "",
   options: [
-    "Breaking programs into functions/procedures",
-    "Writing all code in main",
-    "Using only global variables",
-    "Avoiding functions"
+    "Logic design",
+    "Hardware setup",
+    "Keyboard typing",
+    "Internet speed"
   ],
   correctAnswer: 0,
-  explanation: "Modular programming involves breaking a program into smaller functions/procedures."
+  explanation: "Flowcharts clarify logic before coding, reducing errors in logic design."
 }
 ];
 
