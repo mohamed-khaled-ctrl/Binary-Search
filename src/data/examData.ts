@@ -166,12 +166,152 @@ int main() {
     ],
     correctAnswer: 1,
     explanation: "Static variables retain their values between function calls, so x increments each time: 1, 2, 3."
+  },
+  {
+    id: 11,
+    question: "Which pseudo code statement declares a function without defining it?",
+    options: [
+      "Function Sum(a, b) {}",
+      "Declare Function Sum(a, b)",
+      "Call Sum(5, 10)",
+      "Print Sum"
+    ],
+    correctAnswer: 1,
+    explanation: "In pseudo code, 'Declare Function' is used to declare a function without defining it."
+  },
+  {
+    id: 12,
+    question: "Which of the following cannot be a function name in C++?",
+    options: [
+      "Sum",
+      "main",
+      "3DPrint",
+      "calculate"
+    ],
+    correctAnswer: 2,
+    explanation: "Identifiers in C++ cannot start with a digit, so '3DPrint' is invalid."
+  },
+  {
+    id: 13,
+    question: "What is the output?",
+    code: `Procedure Example(a)
+    a = a * 2
+EndProcedure
+
+x = 5
+Call Example(x)
+Print x`,
+    language: "pseudocode",
+    options: [
+      "5",
+      "10",
+      "Error",
+      "0"
+    ],
+    correctAnswer: 0,
+    explanation: "The parameter is passed by value, so 'x' remains 5 outside the procedure."
+  },
+  {
+    id: 14,
+    question: "Which of the following correctly represents a procedure in pseudo code?",
+    options: [
+      "Procedure Sum(a, b)",
+      "Function Sum(a, b) Returns int",
+      "Call Sum(a, b)",
+      "Print Sum(a, b)"
+    ],
+    correctAnswer: 0,
+    explanation: "'Procedure' is the keyword to define a procedure in pseudo code."
+  },
+  {
+    id: 15,
+    question: "Which of the following is a feature of functions?",
+    options: [
+      "Reusability",
+      "Modularity",
+      "Debugging ease",
+      "All of the above"
+    ],
+    correctAnswer: 3,
+    explanation: "Functions provide all of these benefits: reusability, modularity, and easier debugging."
+  },
+  {
+    id: 16,
+    question: "Which of the following best describes a parameter?",
+    options: [
+      "A variable passed to a function",
+      "A function name",
+      "A value returned by a function",
+      "A type of loop"
+    ],
+    correctAnswer: 0,
+    explanation: "A parameter is a variable used to pass information into a function."
+  },
+  {
+    id: 17,
+    question: "What will be the output of this C++ code?",
+    code: `#include <iostream>
+using namespace std;
+
+void fun(int a=5) {
+    cout << a;
+}
+int main() {
+    fun();
+    fun(10);
+    return 0;
+}`,
+    language: "cpp",
+    options: [
+      "510",
+      "15",
+      "105",
+      "55"
+    ],
+    correctAnswer: 0,
+    explanation: "The first call uses the default parameter (5), the second uses 10, so output is 510."
+  },
+  {
+    id: 18,
+    question: "What is the main difference between a function and a procedure in pseudo code?",
+    options: [
+      "Function returns a value; procedure does not",
+      "Procedure returns a value; function does not",
+      "Functions cannot be called",
+      "Procedures are only for loops"
+    ],
+    correctAnswer: 0,
+    explanation: "Functions return values, whereas procedures do not."
+  },
+  {
+    id: 19,
+    question: "Which statement is true about local variables?",
+    options: [
+      "Exist only inside the function where declared",
+      "Exist globally",
+      "Can be accessed outside the function",
+      "Cannot be used inside functions"
+    ],
+    correctAnswer: 0,
+    explanation: "Local variables exist only within the function scope where they are declared."
+  },
+  {
+    id: 20,
+    question: "Which statement is true about global variables?",
+    options: [
+      "Exist for the whole program",
+      "Only exist in main",
+      "Cannot be used in functions",
+      "Are automatically constants"
+    ],
+    correctAnswer: 0,
+    explanation: "Global variables exist and can be accessed throughout the entire program."
   }
 ];
 
 export const examConfig = {
   title: "Functions & Pseudo Code",
-  duration: 20, // minutes
+  duration: 30, // minutes
   totalQuestions: examQuestions.length,
   passingScore: 60 // percentage
 };
