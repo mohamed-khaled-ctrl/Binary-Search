@@ -960,7 +960,7 @@ return 0;
 
 export const examConfig = {
   title: " Loops / Arrays / Strings ",
-  duration: 30, // minutes
+  duration: 60, // minutes
   totalQuestions: examQuestions.length,
   passingScore: 60 // percentage
 };
