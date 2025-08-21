@@ -11,447 +11,442 @@ export interface Question {
 export const examQuestions: Question[] = [
   {
   id: 1, 
-  question: "What is an algorithm?", 
-  code: ``,
-  language: "", 
+  question: "What is the output of the following code?", 
+  code: `int arr[5] = {1,2,3,4,5}; 
+printf("%d", arr[2]);`, 
+  language: "c", 
   options: [
-    "A programming language",
-    "Step-by-step procedure to solve a problem",
-    "A type of hardware",
-    "None of the above"
+    "1",
+    "2",
+    "3",
+    "5"
   ], 
-  correctAnswer: 1, 
-  explanation: "An algorithm is a finite, step-by-step procedure to solve a problem."
-},
-
-{
+  correctAnswer: 2, 
+  explanation: "Array indexing in C starts from 0, so arr[2] refers to the 3rd element which is 3."
+},{
   id: 2, 
-  question: "Which of the following is NOT a property of an algorithm?", 
-  code: ``,
-  language: "", 
+  question: "Which loop is guaranteed to execute at least once?", 
+  code: ``, 
+  language: ``, 
   options: [
-    "Finiteness",
-    "Definiteness",
-    "Ambiguity",
-    "Input/Output"
+    "for",
+    "while",
+    "do-while",
+    "None"
   ], 
   correctAnswer: 2, 
-  explanation: "Algorithms must be finite, definite, and have input/output. Ambiguity is not a property."
-},
-
-{
+  explanation: "A do-while loop executes the body first and then checks the condition, so it runs at least once."
+},{
   id: 3, 
-  question: "The efficiency of an algorithm is usually measured in terms of:", 
-  code: ``,
-  language: "", 
+  question: "What is the output?", 
+  code: `for(int i=0; i<3; i++) 
+printf("%d", i);`, 
+  language: "c", 
   options: [
-    "Programming language",
-    "Memory and time",
-    "Hardware used",
-    "Number of variables"
+    "0 1 2",
+    "1 2 3",
+    "0 1 2 3",
+    "Compilation error"
+  ], 
+  correctAnswer: 0, 
+  explanation: "The loop prints values of i from 0 to 2, so output is 0 1 2."
+},{
+  id: 4, 
+  question: "How do you calculate the length of a string char str[]=\"Hello\";?", 
+  code: ``, 
+  language: ``, 
+  options: [
+    "sizeof(str)",
+    "strlen(str)",
+    "str.length()",
+    "strsize(str)"
   ], 
   correctAnswer: 1, 
-  explanation: "Efficiency is measured by analyzing time and memory usage."
-},
-
-{
-  id: 4, 
-  question: "Which of these describes the complexity of an algorithm?", 
-  code: ``,
-  language: "", 
-  options: [
-    "Execution time only",
-    "Memory usage only",
-    "Both execution time and memory usage",
-    "Syntax errors"
-  ], 
-  correctAnswer: 2, 
-  explanation: "Algorithm complexity considers both time and memory requirements."
-},
-
-{
+  explanation: "strlen(str) gives the actual length of the string (5 in this case)."
+},{
   id: 5, 
-  question: "A step-by-step solution to a problem is often expressed in:", 
-  code: ``,
-  language: "", 
+  question: "What is the index of the first element in an array?", 
+  code: ``, 
+  language: ``, 
   options: [
-    "Flowchart",
-    "Pseudocode",
-    "Programming language",
+    "1",
+    "0",
+    "-1",
+    "Depends on array size"
+  ], 
+  correctAnswer: 1, 
+  explanation: "In C, arrays are 0-indexed, so the first element is at index 0."
+},{
+  id: 6, 
+  question: "Output of the code?", 
+  code: `int arr[3]={1,2,3}; 
+for(int i=0;i<3;i++) 
+arr[i] = arr[i]*2; 
+printf("%d", arr[1]);`, 
+  language: "c", 
+  options: [
+    "2",
+    "4",
+    "6",
+    "1"
+  ], 
+  correctAnswer: 1, 
+  explanation: "arr[1] is originally 2, multiplied by 2 becomes 4."
+},{
+  id: 7, 
+  question: "Which of the following is a valid string initialization?", 
+  code: ``, 
+  language: ``, 
+  options: [
+    "char s[5] = \"Hello\";",
+    "char s[] = \"Hello\";",
+    "char s[3] = \"Hi\";",
     "All of the above"
   ], 
-  correctAnswer: 3, 
-  explanation: "Solutions can be expressed using flowcharts, pseudocode, or programming languages."
-},
-
-{
-  id: 6, 
-  question: "Which sorting algorithm is the simplest to implement but least efficient for large lists?", 
-  code: ``,
-  language: "", 
-  options: [
-    "Quick Sort",
-    "Merge Sort",
-    "Bubble Sort",
-    "Heap Sort"
-  ], 
-  correctAnswer: 2, 
-  explanation: "Bubble Sort is simple but inefficient for large inputs due to O(n²) complexity."
-},
-
-{
-  id: 7, 
-  question: "Which sorting algorithm has the best average-case complexity?", 
-  code: ``,
-  language: "", 
-  options: [
-    "Bubble Sort",
-    "Insertion Sort",
-    "Quick Sort",
-    "Selection Sort"
-  ], 
-  correctAnswer: 2, 
-  explanation: "Quick Sort has an average-case time complexity of O(n log n), better than others listed."
-},
-
-{
+  correctAnswer: 1, 
+  explanation: "Only char s[] = \"Hello\"; is valid because it automatically sets the correct size."
+},{
   id: 8, 
-  question: "What is the worst-case time complexity of Bubble Sort?", 
-  code: ``,
-  language: "", 
+  question: "Output of the code?", 
+  code: `int i = 0; 
+while(i<3){ 
+printf("%d", i); 
+i++; 
+}`, 
+  language: "c", 
   options: [
-    "O(n)",
-    "O(n²)",
-    "O(log n)",
-    "O(n log n)"
+    "0 1 2",
+    "1 2 3",
+    "Infinite loop",
+    "Compilation error"
   ], 
-  correctAnswer: 1, 
-  explanation: "Bubble Sort’s worst-case complexity is O(n²) when the list is in reverse order."
-},
-
-{
+  correctAnswer: 0, 
+  explanation: "The while loop prints i starting from 0 and increments until 2."
+},{
   id: 9, 
-  question: "Merge Sort is an example of which type of algorithm?", 
-  code: ``,
-  language: "", 
+  question: "Which function concatenates two strings in C?", 
+  code: ``, 
+  language: ``, 
   options: [
-    "Divide and Conquer",
-    "Greedy",
-    "Dynamic Programming",
-    "Brute Force"
+    "stradd()",
+    "strcat()",
+    "strcpy()",
+    "strmerge()"
   ], 
-  correctAnswer: 0, 
-  explanation: "Merge Sort follows the divide and conquer approach to break down problems."
-},
-
-{
+  correctAnswer: 1, 
+  explanation: "strcat() is the standard C function to concatenate strings."
+},{
   id: 10, 
-  question: "Which sorting algorithm is stable?", 
-  code: ``,
-  language: "", 
+  question: "What is wrong with the following array declaration?", 
+  code: `int arr[5] = {1,2,3,4,5,6};`, 
+  language: "c", 
   options: [
-    "Quick Sort",
-    "Selection Sort",
-    "Merge Sort",
-    "Heap Sort"
-  ], 
-  correctAnswer: 2, 
-  explanation: "Merge Sort is stable as it preserves the relative order of equal elements."
-},
-  {
-  id: 11, 
-  question: "Which searching algorithm works only on sorted arrays?", 
-  code: ``,
-  language: "",
-  options: [
-    "Linear Search",
-    "Binary Search",
-    "Hashing",
-    "Breadth-First Search"
+    "Nothing",
+    "Too many initializers",
+    "Size too small",
+    "Array cannot store integers"
   ], 
   correctAnswer: 1, 
-  explanation: "Binary Search requires the array to be sorted to work correctly."
-},
-
-{
-  id: 12, 
-  question: "What is the time complexity of Binary Search?", 
-  code: ``,
-  language: "",
-  options: [
-    "O(n)",
-    "O(log n)",
-    "O(n²)",
-    "O(1)"
-  ], 
-  correctAnswer: 1, 
-  explanation: "Binary Search divides the array in half each step, resulting in O(log n) complexity."
-},
-
-{
-  id: 13, 
-  question: "Linear Search is best suited for:", 
-  code: ``,
-  language: "",
-  options: [
-    "Large sorted arrays",
-    "Small or unsorted arrays",
-    "Trees",
-    "Graphs"
-  ], 
-  correctAnswer: 1, 
-  explanation: "Linear Search is efficient only for small datasets or unsorted arrays."
-},
-
-{
-  id: 14, 
-  question: "Hashing provides searching in:", 
-  code: ``,
-  language: "",
-  options: [
-    "O(n)",
-    "O(log n)",
-    "O(1)",
-    "O(n²)"
-  ], 
-  correctAnswer: 2, 
-  explanation: "Hashing allows constant time O(1) searching on average."
-},
-
-{
-  id: 15, 
-  question: "Which searching method is recursive by nature?", 
-  code: ``,
-  language: "",
-  options: [
-    "Linear Search",
-    "Binary Search",
-    "Hashing",
-    "None of the above"
-  ], 
-  correctAnswer: 1, 
-  explanation: "Binary Search can be naturally implemented using recursion."
-},
-
-{
-  id: 16, 
-  question: "What is the best case complexity of Quick Sort?", 
-  code: ``,
-  language: "",
-  options: [
-    "O(n²)",
-    "O(n log n)",
-    "O(log n)",
-    "O(n)"
-  ], 
-  correctAnswer: 1, 
-  explanation: "In the best case, Quick Sort partitions the array evenly, achieving O(n log n)."
-},
-
-{
-  id: 17, 
-  question: "What is the worst case complexity of Quick Sort?", 
-  code: ``,
-  language: "",
-  options: [
-    "O(n)",
-    "O(n²)",
-    "O(n log n)",
-    "O(log n)"
-  ], 
-  correctAnswer: 1, 
-  explanation: "If partitions are highly unbalanced, Quick Sort degrades to O(n²)."
-},
-
-{
-  id: 18, 
-  question: "Which complexity is faster: O(n log n) or O(n²)?", 
-  code: ``,
-  language: "",
-  options: [
-    "O(n log n)",
-    "O(n²)",
-    "Both are same",
-    "Cannot decide"
-  ], 
-  correctAnswer: 0, 
-  explanation: "O(n log n) grows slower than O(n²), so it is faster for large inputs."
-},
-
-{
-  id: 19, 
-  question: "What does “Big O” notation represent?", 
-  code: ``,
-  language: "",
-  options: [
-    "Space complexity only",
-    "Time complexity only",
-    "Upper bound of algorithm efficiency",
-    "Lower bound of algorithm efficiency"
-  ], 
-  correctAnswer: 2, 
-  explanation: "Big O gives the upper bound on the growth rate of an algorithm’s complexity."
-},
-
-{
-  id: 20, 
-  question: "Which algorithm has exponential complexity?", 
-  code: ``,
-  language: "",
-  options: [
-    "Merge Sort",
-    "Fibonacci recursive solution",
-    "Binary Search",
-    "Quick Sort"
-  ], 
-  correctAnswer: 1, 
-  explanation: "The naive recursive Fibonacci solution has exponential time complexity."
+  explanation: "The array size is 5, but 6 values are provided, which causes 'too many initializers' error."
 }
 ,
 {
-  id: 21,
-  question: "Which algorithmic paradigm chooses the best option at each step?",
-  code: ``,
-  language: "",
+  id: 11, 
+  question: "Output of the code?", 
+  code: `int arr[4] = {1}; 
+printf("%d", arr[2]);`, 
+  language: "c", 
   options: [
-    "Divide & Conquer",
-    "Dynamic Programming",
-    "Greedy",
-    "Backtracking"
-  ],
-  correctAnswer: 2,
-  explanation: "The greedy paradigm makes the locally optimal choice at each step with the hope of reaching a global optimum."
-},
-{
-  id: 22,
-  question: "Dijkstra’s algorithm is an example of:",
-  code: ``,
-  language: "",
+    "0",
+    "1",
+    "Garbage value",
+    "Compilation error"
+  ], 
+  correctAnswer: 0, 
+  explanation: "When partially initialized, remaining array elements are set to 0, so arr[2] is 0."
+},{
+  id: 12, 
+  question: "How to skip current iteration in a loop?", 
+  code: ``, 
+  language: ``, 
   options: [
-    "Greedy",
-    "Divide & Conquer",
-    "Dynamic Programming",
-    "Brute Force"
-  ],
-  correctAnswer: 0,
-  explanation: "Dijkstra’s algorithm repeatedly selects the nearest unvisited node, which is a greedy approach."
-},
-{
-  id: 23,
-  question: "Merge Sort follows which paradigm?",
-  code: ``,
-  language: "",
+    "break",
+    "continue",
+    "return",
+    "exit"
+  ], 
+  correctAnswer: 1, 
+  explanation: "continue skips the current iteration and moves to the next loop cycle."
+},{
+  id: 13, 
+  question: "What is the output?", 
+  code: `char str[] = "CPlus"; 
+printf("%c", str[4]);`, 
+  language: "c", 
   options: [
-    "Greedy",
-    "Divide & Conquer",
-    "Dynamic Programming",
-    "Brute Force"
-  ],
-  correctAnswer: 1,
-  explanation: "Merge Sort divides the array into halves, recursively sorts them, and then merges the results, which is divide and conquer."
-},
-{
-  id: 24,
-  question: "Which of these problems can be solved efficiently using Greedy algorithm?",
-  code: ``,
-  language: "",
+    "C",
+    "P",
+    "s",
+    "Compilation error"
+  ], 
+  correctAnswer: 2, 
+  explanation: "Index 4 corresponds to the 5th character in 'CPlus', which is 's'."
+},{
+  id: 14, 
+  question: "Which of the following is true for arrays?", 
+  code: ``, 
+  language: ``, 
   options: [
-    "Knapsack (0/1)",
-    "Fractional Knapsack",
-    "Fibonacci",
-    "Tower of Hanoi"
-  ],
-  correctAnswer: 1,
-  explanation: "Fractional Knapsack allows taking fractions of items, making a greedy choice optimal."
-},
-{
-  id: 25,
-  question: "Divide & Conquer works by:",
-  code: ``,
-  language: "",
+    "Array size must be constant in C",
+    "Arrays can store different data types",
+    "Arrays are dynamic by default",
+    "Array index starts from 1"
+  ], 
+  correctAnswer: 0, 
+  explanation: "In C, array size must be a fixed constant defined at compile time."
+},{
+  id: 15, 
+  question: "Output of nested loops?", 
+  code: `for(int i=0;i<2;i++){ 
+for(int j=0;j<2;j++) 
+printf("%d", j); 
+}`, 
+  language: "c", 
   options: [
-    "Solving smaller sub-problems and combining results",
-    "Choosing optimal steps",
-    "Using recursion only",
-    "Iterating through all options"
-  ],
-  correctAnswer: 0,
-  explanation: "Divide and Conquer breaks a problem into smaller sub-problems, solves them, and then combines the results."
-},
-{
-  id: 26,
-  question: "Which algorithm is used to find shortest path in a weighted graph?",
-  code: ``,
-  language: "",
+    "00 11",
+    "01 01",
+    "0123",
+    "0011"
+  ], 
+  correctAnswer: 1, 
+  explanation: "Inner loop prints 0 then 1 for each iteration of outer loop, so output is 01 01."
+},{
+  id: 16, 
+  question: "Which function copies one string into another?", 
+  code: ``, 
+  language: ``, 
   options: [
-    "BFS",
-    "DFS",
-    "Dijkstra",
-    "Linear Search"
-  ],
-  correctAnswer: 2,
-  explanation: "Dijkstra’s algorithm efficiently finds the shortest path in weighted graphs with non-negative weights."
-},
-{
-  id: 27,
-  question: "Dynamic Programming is best for problems with:",
-  code: ``,
-  language: "",
+    "strcpy(dest, src)",
+    "strcat(dest, src)",
+    "strlen(str)",
+    "strcmp(str1,str2)"
+  ], 
+  correctAnswer: 0, 
+  explanation: "strcpy copies contents of source string into destination string."
+},{
+  id: 17, 
+  question: "What is the output?", 
+  code: `int i=0; 
+do{ 
+printf("%d", i); 
+i++; 
+}while(i>3);`, 
+  language: "c", 
   options: [
-    "Overlapping subproblems",
-    "No subproblems",
-    "Recursive only",
-    "Constant time"
-  ],
-  correctAnswer: 0,
-  explanation: "Dynamic Programming solves problems with overlapping subproblems by storing and reusing previous results."
-},
-{
-  id: 28,
-  question: "Which of these is a greedy algorithm?",
-  code: ``,
-  language: "",
+    "0",
+    "0123",
+    "Infinite loop",
+    "Compilation error"
+  ], 
+  correctAnswer: 0, 
+  explanation: "do-while executes once before checking condition, so it prints 0."
+},{
+  id: 18, 
+  question: "Which of the following is a 2D array declaration?", 
+  code: ``, 
+  language: ``, 
   options: [
-    "Huffman coding",
-    "Merge Sort",
-    "Quick Sort",
-    "Linear Search"
-  ],
-  correctAnswer: 0,
-  explanation: "Huffman coding builds the optimal prefix code by repeatedly choosing the smallest frequency nodes, a greedy approach."
-},
-{
-  id: 29,
-  question: "Backtracking is commonly used in:",
-  code: ``,
-  language: "",
+    "int arr[3];",
+    "int arr[3][4];",
+    "int arr[];",
+    "int arr[4,3];"
+  ], 
+  correctAnswer: 1, 
+  explanation: "int arr[3][4]; is the correct way to declare a 2D array in C."
+},{
+  id: 19, 
+  question: "Output?", 
+  code: `char str[]="Hi"; 
+str[0]='h'; 
+printf("%s", str);`, 
+  language: "c", 
   options: [
-    "Graph traversal",
-    "Puzzle solving (like Sudoku)",
-    "Sorting arrays",
-    "Hashing"
-  ],
-  correctAnswer: 1,
-  explanation: "Backtracking explores possible solutions and backtracks when a solution is not feasible, making it useful in puzzles like Sudoku."
-},
-{
-  id: 30,
-  question: "Which of the following is a divide and conquer algorithm?",
-  code: ``,
-  language: "",
+    "Hi",
+    "hi",
+    "Compilation error",
+    "H"
+  ], 
+  correctAnswer: 1, 
+  explanation: "str[0] is changed from 'H' to 'h', so the string becomes 'hi'."
+},{
+  id: 20, 
+  question: "Which of the following statements is true about break?", 
+  code: ``, 
+  language: ``, 
   options: [
-    "Binary Search",
-    "Bubble Sort",
-    "Linear Search",
-    "Hashing"
-  ],
-  correctAnswer: 0,
-  explanation: "Binary Search divides the search space in half at each step, which is divide and conquer."
+    "Stops current iteration",
+    "Exits the loop completely",
+    "Skips next iteration",
+    "Exits the function"
+  ], 
+  correctAnswer: 1, 
+  explanation: "break immediately exits the loop, not just the current iteration."
 }
+,
+{
+  id: 21, 
+  question: "What is the output?", 
+  code: `int arr[3]={2,4,6}; 
+printf("%d", arr[3]);`, 
+  language: "c", 
+  options: [
+    "6",
+    "0",
+    "Garbage value",
+    "Compilation error"
+  ], 
+  correctAnswer: 2, 
+  explanation: "Accessing arr[3] is out of bounds since valid indices are 0–2, so it gives a garbage value."
+},
+{
+  id: 22, 
+  question: "How to compare two strings?", 
+  code: ``, 
+  language: ``, 
+  options: [
+    "strcomp(str1,str2)",
+    "strcmp(str1,str2)",
+    "strcompare(str1,str2)",
+    "strmatch(str1,str2)"
+  ], 
+  correctAnswer: 1, 
+  explanation: "strcmp is the standard C function used to compare two strings."
+},
+{
+  id: 23, 
+  question: "Which is infinite loop?", 
+  code: ``, 
+  language: ``, 
+  options: [
+    "for(;;)",
+    "while(1)",
+    "do{}while(1)",
+    "All of the above"
+  ], 
+  correctAnswer: 3, 
+  explanation: "All listed constructs represent infinite loops in C."
+},
+{
+  id: 24, 
+  question: "Output of the code?", 
+  code: `int arr[]={1,2,3}; 
+printf("%d", sizeof(arr)/sizeof(arr[0]));`, 
+  language: "c", 
+  options: [
+    "1",
+    "3",
+    "4",
+    "Compilation error"
+  ], 
+  correctAnswer: 1, 
+  explanation: "sizeof(arr)/sizeof(arr[0]) calculates the number of elements, which is 3."
+},
+{
+  id: 25, 
+  question: "Which loop is preferred when number of iterations is known?", 
+  code: ``, 
+  language: ``, 
+  options: [
+    "while",
+    "do-while",
+    "for",
+    "goto"
+  ], 
+  correctAnswer: 2, 
+  explanation: "The for loop is preferred when the number of iterations is known."
+},
+{
+  id: 26, 
+  question: "What is the value of arr[0] after execution?", 
+  code: `int arr[2]={0}; 
+arr[0]+=5;`, 
+  language: "c", 
+  options: [
+    "0",
+    "5",
+    "Garbage",
+    "Compilation error"
+  ], 
+  correctAnswer: 1, 
+  explanation: "arr[0] starts at 0 and then 5 is added, so the value becomes 5."
+},
+{
+  id: 27, 
+  question: "Which of the following is correct for string termination?", 
+  code: ``, 
+  language: ``, 
+  options: [
+    "Strings must end with \\n",
+    "Strings must end with \\0",
+    "Strings must end with NULL",
+    "Strings have no terminator"
+  ], 
+  correctAnswer: 1, 
+  explanation: "C strings must end with a null character '\\0'."
+},
+{
+  id: 28, 
+  question: "Output of code?", 
+  code: `int i=1; 
+for(;i<=3;i++) 
+printf("%d", i);`, 
+  language: "c", 
+  options: [
+    "123",
+    "0123",
+    "1 2 3",
+    "Compilation error"
+  ], 
+  correctAnswer: 0, 
+  explanation: "Loop prints i from 1 to 3 without spaces, so output is 123."
+},
+{
+  id: 29, 
+  question: "What is the correct way to declare a character array of size 10?", 
+  code: ``, 
+  language: ``, 
+  options: [
+    "char arr[10];",
+    "char arr;",
+    "char arr[10]=\"\";",
+    "char arr=\"\";"
+  ], 
+  correctAnswer: 0, 
+  explanation: "char arr[10]; correctly declares a character array of size 10."
+},
+{
+  id: 30, 
+  question: "What is the output?", 
+  code: `int arr[5]={0}; 
+for(int i=0;i<5;i++){ 
+arr[i]=i+1; 
+printf("%d", arr[i]); 
+}`, 
+  language: "c", 
+  options: [
+    "12345",
+    "01234",
+    "11111",
+    "54321"
+  ], 
+  correctAnswer: 0, 
+  explanation: "arr[i] takes values 1 to 5, so the output is 12345."
+}
+
 ];
 
 export const examConfig = {
-  title: "Algorithms",
+  title: " Loops / Arrays / Strings ",
   duration: 30, // minutes
   totalQuestions: examQuestions.length,
   passingScore: 60 // percentage
