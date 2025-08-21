@@ -441,8 +441,521 @@ printf("%d", arr[i]);
   ], 
   correctAnswer: 0, 
   explanation: "arr[i] takes values 1 to 5, so the output is 12345."
+},
+{
+  id: 31,
+  question: "What is the output?",
+  code: `#include<stdio.h> 
+int main() { 
+int a = 5; 
+printf("%d", a++); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "5",
+    "6",
+    "0",
+    "Compilation error"
+  ],
+  correctAnswer: 0,
+  explanation: "a++ prints the current value (5), then increments."
+},
+{
+  id: 32,
+  question: "Which is the correct way to declare a pointer?",
+  options: [
+    "int *p;",
+    "int p*;",
+    "int &p;",
+    "int p;"
+  ],
+  correctAnswer: 0,
+  explanation: "Pointers are declared with * after the type, e.g., int *p."
+},
+{
+  id: 33,
+  question: "What is the output?",
+  code: `#include<stdio.h> 
+int main() { 
+char str[] = "Hello"; 
+str[0] = 'h'; 
+printf("%s", str); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "hello",
+    "Hello",
+    "Compilation error",
+    "Runtime error"
+  ],
+  correctAnswer: 0,
+  explanation: "First character is changed to 'h', so output is hello."
+},
+{
+  id: 34,
+  question: "Scope resolution operator in C++ is:",
+  options: [
+    "::",
+    "->",
+    ".",
+    "&"
+  ],
+  correctAnswer: 0,
+  explanation: "The scope resolution operator in C++ is ::"
+},
+{
+  id: 35,
+  question: "Output of:",
+  code: `#include<stdio.h> 
+int main() { 
+int x = 10, y = 20, z = 30; 
+printf("%d", x, y, z); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "10",
+    "30",
+    "Compilation error",
+    "Undefined behavior"
+  ],
+  correctAnswer: 0,
+  explanation: "printf uses only the first argument for %d, so 10 is printed."
+},
+{
+  id: 36,
+  question: "Which is the correct way to declare an array?",
+  options: [
+    "int arr[5];",
+    "int arr();",
+    "int arr;",
+    "array arr[5];"
+  ],
+  correctAnswer: 0,
+  explanation: "Correct syntax is int arr[5]; to declare an array of 5 integers."
+},
+{
+  id: 37,
+  question: "What is printed?",
+  code: `#include<stdio.h> 
+int main() { 
+int a = printf("CppBuzz.com"); 
+printf("%d", a); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "Compilation error",
+    "0",
+    "CppBuzz.com",
+    "CppBuzz.com11"
+  ],
+  correctAnswer: 3,
+  explanation: "printf prints 'CppBuzz.com' and returns 11, so output is CppBuzz.com11."
+},
+{
+  id: 38,
+  question: "Which operator is used for address-of in C/C++?",
+  options: [
+    "*",
+    "&",
+    "->",
+    "%"
+  ],
+  correctAnswer: 1,
+  explanation: "The address-of operator is &."
+},
+{
+  id: 39,
+  question: "Output?",
+  code: `#include<stdio.h> 
+int main() { 
+int i = 0; 
+for(; i < 3; i++); 
+printf("%d", i); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "0",
+    "2",
+    "3",
+    "Compilation error"
+  ],
+  correctAnswer: 2,
+  explanation: "The loop runs until i=3, then exits; printf prints 3."
+},
+{
+  id: 40,
+  question: "What is printed?",
+  code: `#include<stdio.h> 
+int main() { 
+int x; 
+x = 10, 20, 30; 
+printf("%d", x); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "10",
+    "20",
+    "30",
+    "Compilation error"
+  ],
+  correctAnswer: 0,
+  explanation: "Comma operator assigns 10 to x; 20 and 30 are ignored."
+},
+{
+  id: 41,
+  question: "What is output?",
+  code: `#include<stdio.h> 
+int main() { 
+char *p = "Hello"; 
+p[0] = 'h'; 
+printf("%s", p); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "hello",
+    "Hello",
+    "Compilation error",
+    "Runtime error"
+  ],
+  correctAnswer: 3,
+  explanation: "String literals are stored in read-only memory; modifying them causes runtime error."
+},
+{
+  id: 42,
+  question: "Output?",
+  code: `#include<iostream> 
+using namespace std; 
+int main() { 
+int x = 10; 
+cout << x++; 
+return 0; 
+}`,
+  language: "cpp",
+  options: [
+    "10",
+    "11",
+    "Compilation error",
+    "0"
+  ],
+  correctAnswer: 0,
+  explanation: "Post-increment prints current value (10) then increments."
+},
+{
+  id: 43,
+  question: "Output?",
+  code: `#include<stdio.h> 
+int main() { 
+int a = 5, b = 2; 
+printf("%d", a / b); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "2.5",
+    "2",
+    "3",
+    "Compilation error"
+  ],
+  correctAnswer: 1,
+  explanation: "Integer division truncates, so 5/2 = 2."
+},
+{
+  id: 44,
+  question: "Which of these is invalid?",
+  options: [
+    "int arr[5];",
+    "int arr[] = {1,2,3};",
+    "int arr[5] = {1,2,3,4,5,6};",
+    "int arr[5] = {0};"
+  ],
+  correctAnswer: 2,
+  explanation: "Array of size 5 cannot hold 6 initializers."
+},
+{
+  id: 45,
+  question: "What is printed?",
+  code: `#include<stdio.h> 
+int main() { 
+int a = 1, b = 2, c = 3; 
+printf("%d", a<b && b<c); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "0",
+    "1",
+    "2",
+    "Compilation error"
+  ],
+  correctAnswer: 1,
+  explanation: "Both conditions are true, so logical AND gives 1."
+},
+{
+  id: 46,
+  question: "Which is correct?",
+  options: [
+    "int *p = NULL;",
+    "int &p = 0;",
+    "int p* = NULL;",
+    "int p = &NULL;"
+  ],
+  correctAnswer: 0,
+  explanation: "Correct syntax for null pointer initialization is int *p = NULL;"
+},
+{
+  id: 47,
+  question: "Output?",
+  code: `#include<stdio.h> 
+int main() { 
+int x = 3; 
+printf("%d", ++x * 2); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "6",
+    "8",
+    "7",
+    "5"
+  ],
+  correctAnswer: 1,
+  explanation: "++x makes x=4, then multiplied by 2 gives 8."
+},
+{
+  id: 48,
+  question: "Output?",
+  code: `#include<stdio.h> 
+int main() { 
+int a = 2, b = 3; 
+printf("%d", a>b ? a : b); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "2",
+    "3",
+    "Compilation error",
+    "Undefined"
+  ],
+  correctAnswer: 1,
+  explanation: "a > b is false, so ternary returns b (3)."
+},
+{
+  id: 49,
+  question: "Which is correct syntax?",
+  options: [
+    "int main()",
+    "void main()",
+    "main()",
+    "main(void)"
+  ],
+  correctAnswer: 0,
+  explanation: "Standard C syntax is int main(); main(void) is also valid."
+},
+{
+  id: 50,
+  question: "Output?",
+  code: `#include<stdio.h> 
+int main() { 
+char c = 'A'; 
+printf("%c %d", c, c); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "A 65",
+    "A A",
+    "65 65",
+    "Compilation error"
+  ],
+  correctAnswer: 0,
+  explanation: "'A' prints as character A and ASCII value 65."
+},
+{
+  id: 51,
+  question: "Output?",
+  code: `#include<stdio.h> 
+int main() { 
+int i = 5; 
+printf("%d %d", i, i++); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "5 6",
+    "6 5",
+    "Undefined behavior",
+    "Compilation error"
+  ],
+  correctAnswer: 2,
+  explanation: "Using the same variable with modification and access in one statement is undefined behavior."
+},
+{
+  id: 52,
+  question: "Output?",
+  code: `#include<stdio.h> 
+int main() { 
+int arr[3] = {1,2,3}; 
+printf("%d", arr[2]); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "1",
+    "2",
+    "3",
+    "Compilation error"
+  ],
+  correctAnswer: 2,
+  explanation: "arr[2] refers to the third element, which is 3."
+},
+{
+  id: 53,
+  question: "Output?",
+  code: `#include<stdio.h> 
+int main() { 
+int x = 1; 
+if(x = 0) 
+printf("Yes"); 
+else 
+printf("No"); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "Yes",
+    "No",
+    "Compilation error",
+    "Undefined behavior"
+  ],
+  correctAnswer: 1,
+  explanation: "x=0 assigns 0 to x, which is false, so 'No' is printed."
+},
+{
+  id: 54,
+  question: "What is printed?",
+  code: `#include<stdio.h> 
+int main() { 
+printf("%d", sizeof(char)); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "1",
+    "2",
+    "4",
+    "8"
+  ],
+  correctAnswer: 0,
+  explanation: "sizeof(char) is always 1 byte."
+},
+{
+  id: 55,
+  question: "Which is correct comment in C/C++?",
+  options: [
+    "// Comment",
+    "/* Comment */",
+    "# Comment",
+    "a & b"
+  ],
+  correctAnswer: 3,
+  explanation: "C/C++ supports // single-line and /* */ multi-line comments."
+},
+{
+  id: 56,
+  question: "Output?",
+  code: `#include<stdio.h> 
+int main() { 
+int a = 1, b = 2; 
+printf("%d", a & b); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "3",
+    "0",
+    "1",
+    "Compilation error"
+  ],
+  correctAnswer: 1,
+  explanation: "Bitwise AND of 01 and 10 is 00, which is 0."
+},
+{
+  id: 57,
+  question: "Output?",
+  code: `#include<stdio.h> 
+int main() { 
+int x = 5; 
+printf("%d", x>>1); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "2",
+    "5",
+    "10",
+    "Compilation error"
+  ],
+  correctAnswer: 0,
+  explanation: "Right shift by 1 divides the number by 2 (integer division), so 5 >> 1 = 2."
+},
+{
+  id: 58,
+  question: "Output?",
+  code: `#include<stdio.h> 
+int main() { 
+char s[] = "C++"; 
+printf("%c", s[1]); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "C",
+    "+",
+    "+ +",
+    "Compilation error"
+  ],
+  correctAnswer: 1,
+  explanation: "s[1] is the second character of the string, which is '+'."
+},
+{
+  id: 59,
+  question: "Which statement is correct?",
+  options: [
+    "++i increments before use",
+    "i++ increments after use",
+    "Both a & b",
+    "None"
+  ],
+  correctAnswer: 2,
+  explanation: "++i pre-increments, i++ post-increments, so both are correct."
+},
+{
+  id: 60,
+  question: "Output?",
+  code: `#include<stdio.h> 
+int main() { 
+int i = 5; 
+printf("%d", i*=2); 
+return 0; 
+}`,
+  language: "c",
+  options: [
+    "5",
+    "10",
+    "7",
+    "2"
+  ],
+  correctAnswer: 1,
+  explanation: "i*=2 multiplies i by 2 and assigns it back, so 5*2 = 10."
 }
-
 ];
 
 export const examConfig = {
