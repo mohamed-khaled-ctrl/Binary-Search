@@ -955,12 +955,564 @@ return 0;
   ],
   correctAnswer: 1,
   explanation: "i*=2 multiplies i by 2 and assigns it back, so 5*2 = 10."
+},
+{
+  id: 61,
+  question: "What is the output of the following code?",
+  code: `#include <stdio.h>
+int main() {
+    printf("%d", sizeof('A'));
+    return 0;
+}`,
+  language: "c",
+  options: [
+    "1",
+    "2",
+    "4",
+    "Depends on the compiler"
+  ],
+  correctAnswer: 3,
+  explanation: "Depends on the compiler (In C, 'A' is treated as an int, so sizeof('A') is usually 4. In C++, it is 1)."
+},
+{
+  id: 62,
+  question: "Which of the following is not a valid C variable name?",
+  code: ``,
+  language: "c",
+  options: [
+    "_var",
+    "1var",
+    "var1",
+    "Var"
+  ],
+  correctAnswer: 1,
+  explanation: "Variable names cannot start with a digit."
+},
+{
+  id: 63,
+  question: "What is the output of the following C code?",
+  code: `#include <stdio.h>
+int main() {
+    int x = 5;
+    printf("%d", x++ + ++x);
+    return 0;
+}`,
+  language: "c",
+  options: [
+    "10",
+    "11",
+    "12",
+    "Undefined behavior"
+  ],
+  correctAnswer: 3,
+  explanation: "Undefined behavior (Modifying x twice between sequence points leads to UB)."
+},
+{
+  id: 64,
+  question: "Which operator is used for dynamic memory allocation in C++?",
+  code: ``,
+  language: "cpp",
+  options: [
+    "malloc",
+    "new",
+    "alloc",
+    "create"
+  ],
+  correctAnswer: 1,
+  explanation: "The 'new' operator is used for dynamic memory allocation in C++."
+},
+{
+  id: 65,
+  question: "What does the following C code print?",
+  code: `#include <stdio.h>
+int main() {
+    int a = 10, b = 20;
+    if (a = b) printf("Equal");
+    else printf("Not Equal");
+    return 0;
+}`,
+  language: "c",
+  options: [
+    "Equal",
+    "Not Equal",
+    "Compilation Error",
+    "Runtime Error"
+  ],
+  correctAnswer: 0,
+  explanation: "Assignment a = b returns 20 (true), so 'Equal' is printed."
+},
+{
+  id: 66,
+  question: "What is the output of the following C++ code?",
+  code: `#include <iostream>
+using namespace std;
+int main() {
+    int x = 5, y = 2;
+    cout << (x << y) << endl;
+    return 0;
+}`,
+  language: "cpp",
+  options: [
+    "10",
+    "20",
+    "7",
+    "3"
+  ],
+  correctAnswer: 1,
+  explanation: "Left-shifting 5 by 2 gives 5 * 2^2 = 20."
+},
+{
+  id: 67,
+  question: "Which of the following is not a storage class in C?",
+  code: ``,
+  language: "c",
+  options: [
+    "auto",
+    "register",
+    "static",
+    "public"
+  ],
+  correctAnswer: 3,
+  explanation: "public (It is a C++ access specifier, not a C storage class)."
+},
+{
+  id: 68,
+  question: "What is the output of the following C code?",
+  code: `#include <stdio.h>
+int main() {
+    int i = 5;
+    printf("%d", i-- - --i);
+    return 0;
+}`,
+  language: "c",
+  options: [
+    "1",
+    "0",
+    "5",
+    "Syntax Error"
+  ],
+  correctAnswer: 1,
+  explanation: "0 (The expression leads to undefined behavior, but assuming right operand evaluated first, --i makes i=4, value 4; then i-- value 4, i=3; 4 - 4 = 0)."
+},
+{
+  id: 69,
+  question: "What does #include <stdio.h> do in a C program?",
+  code: ``,
+  language: "c",
+  options: [
+    "Includes standard input/output functions",
+    "Defines main function",
+    "Allocates memory",
+    "Declares variables"
+  ],
+  correctAnswer: 0,
+  explanation: "Includes standard input/output functions."
+},
+{
+  id: 70,
+  question: "What is the output of the following C++ code?",
+  code: `#include <iostream>
+using namespace std;
+int main() {
+    int a = 5;
+    int &r = a;
+    r++;
+    cout << a;
+    return 0;
+}`,
+  language: "cpp",
+  options: [
+    "5",
+    "6",
+    "Compilation Error",
+    "Runtime Error"
+  ],
+  correctAnswer: 1,
+  explanation: "6 (Reference r modifies a directly)."
+},
+{
+  id: 71,
+  question: "Which of the following is not a valid C data type?",
+  code: ``,
+  language: "c",
+  options: [
+    "float",
+    "double",
+    "real",
+    "char"
+  ],
+  correctAnswer: 2,
+  explanation: "real (Not a standard C type)."
+},
+{
+  id: 72,
+  question: "What is the output of the following C code?",
+  code: `#include <stdio.h>
+int main() {
+    int x = 0;
+    if (x = 1) printf("True");
+    else printf("False");
+    return 0;
+}`,
+  language: "c",
+  options: [
+    "True",
+    "False",
+    "Compilation Error",
+    "Runtime Error"
+  ],
+  correctAnswer: 0,
+  explanation: "Assignment x = 1 returns 1 (true), so 'True' is printed."
+},
+{
+  id: 73,
+  question: "What is the correct way to declare a pointer in C?",
+  code: ``,
+  language: "c",
+  options: [
+    "int ptr;",
+    "int *ptr;",
+    "*int ptr;",
+    "ptr int;"
+  ],
+  correctAnswer: 1,
+  explanation: "The correct syntax for declaring a pointer is type *name;"
+},
+{
+  id: 74,
+  question: "What is the output of the following C++ code?",
+  code: `#include <iostream>
+using namespace std;
+int main() {
+    int arr[3] = {1,2,3};
+    cout << arr[3];
+    return 0;
+}`,
+  language: "cpp",
+  options: [
+    "3",
+    "0",
+    "Garbage Value",
+    "Runtime Error"
+  ],
+  correctAnswer: 2,
+  explanation: "Accessing out-of-bounds index leads to undefined behavior."
+},
+{
+  id: 75,
+  question: "Which keyword is used to prevent a variable from being modified in C?",
+  code: ``,
+  language: "c",
+  options: [
+    "const",
+    "static",
+    "final",
+    "fixed"
+  ],
+  correctAnswer: 0,
+  explanation: "The const keyword makes a variable read-only."
+},
+{
+  id: 76,
+  question: "What is the output of the following C code?",
+  code: `#include <stdio.h>
+int main() {
+    printf("%d", 10 ? 0 ? 5 : 3 : 8);
+    return 0;
+}`,
+  language: "c",
+  options: [
+    "5",
+    "3",
+    "8",
+    "0"
+  ],
+  correctAnswer: 1,
+  explanation: "Nested ternary operator: 10 is true, so evaluate 0 ? 5 : 3; 0 is false, so 3."
+},
+{
+  id: 77,
+  question: "Which function is used to deallocate memory in C?",
+  code: ``,
+  language: "c",
+  options: [
+    "free()",
+    "delete",
+    "remove()",
+    "dealloc()"
+  ],
+  correctAnswer: 0,
+  explanation: "free() is used to deallocate memory allocated with malloc or calloc in C."
+},
+{
+  id: 78,
+  question: "What is the output of the following C++ code?",
+  code: `#include <iostream>
+using namespace std;
+int main() {
+    int x = 5;
+    cout << (x > 2 ? "Yes" : "No");
+    return 0;
+}`,
+  language: "cpp",
+  options: [
+    "Yes",
+    "No",
+    "1",
+    "Compilation Error"
+  ],
+  correctAnswer: 0,
+  explanation: "Ternary operator evaluates to \"Yes\" since 5 > 2."
+},
+{
+  id: 79,
+  question: "What is the size of an empty class in C++?",
+  code: ``,
+  language: "cpp",
+  options: [
+    "0",
+    "1",
+    "4",
+    "Compilation Error"
+  ],
+  correctAnswer: 1,
+  explanation: "Empty classes have a size of 1 for unique addressability."
+},
+{
+  id: 80,
+  question: "What is the output of the following C code?",
+  code: `#include <stdio.h>
+int main() {
+    int a = 5, b = 10;
+    printf("%d", a + b);
+    return 0;
+}`,
+  language: "c",
+  options: [
+    "5",
+    "10",
+    "15",
+    "510"
+  ],
+  correctAnswer: 2,
+  explanation: "Simple addition of 5 + 10 = 15."
+},
+{
+  id: 81,
+  question: "Which header file is needed for printf() in C?",
+  code: ``,
+  language: "c",
+  options: [
+    "<conio.h>",
+    "<stdlib.h>",
+    "<stdio.h>",
+    "<math.h>"
+  ],
+  correctAnswer: 2,
+  explanation: "The printf() function is part of the Standard Input/Output library, included via <stdio.h>."
+},
+{
+  id: 82,
+  question: "What is sizeof(int) typically on a 32-bit system?",
+  code: ``,
+  language: "c",
+  options: [
+    "1",
+    "2",
+    "4",
+    "8"
+  ],
+  correctAnswer: 2,
+  explanation: "On a 32-bit system, int is usually 4 bytes."
+},
+{
+  id: 83,
+  question: "What does ++x do?",
+  code: ``,
+  language: "c",
+  options: [
+    "Post-increment",
+    "Pre-increment",
+    "Adds 2 to x",
+    "Returns unchanged"
+  ],
+  correctAnswer: 1,
+  explanation: "++x is the pre-increment operator, which increments x before using its value."
+},
+{
+  id: 84,
+  question: "What is the output of printf(\"%c\", 65);?",
+  code: `#include <stdio.h>
+int main() {
+    printf("%c", 65);
+    return 0;
+}`,
+  language: "c",
+  options: [
+    "65",
+    "A",
+    "Compilation Error",
+    "Garbage Value"
+  ],
+  correctAnswer: 1,
+  explanation: "65 is the ASCII code for 'A'."
+},
+{
+  id: 85,
+  question: "What will happen when the following C++ code is compiled?",
+  code: `#include <iostream>
+using namespace std;
+
+int main() {
+    int A[3] = {1, 2, 3};
+    int B[3];
+
+    B = A;   // ← this line
+
+    return 0;
+}`,
+  language: "cpp",
+  options: [
+    "The program prints:  1 2 3",
+    "The program runs without errors but prints nothing",
+    "Compile error",
+    "Runtime error"
+  ],
+  correctAnswer: 2,
+  explanation: "In C++, arrays cannot be directly assigned to each other; this causes a compile error."
+},
+{
+  id: 86,
+  question: "Which of the following is the correct syntax for the ternary operator in C/C++?",
+  code: ``,
+  language: "c",
+  options: [
+    "condition : value_if_true ? value_if_false;",
+    "condition ? value_if_true : value_if_false;",
+    "if (condition) ? value_if_true : value_if_false;",
+    "condition ? value_if_false : value_if_true;"
+  ],
+  correctAnswer: 1,
+  explanation: "The correct syntax is condition ? value_if_true : value_if_false."
+},
+{
+  id: 87,
+  question: "What will be the correct ternary expression to assign the maximum value between x and y in the following code?",
+  code: `#include <stdio.h>
+int main() {
+    int x = 10;
+    int y = 5;
+    int max;
+
+    // Using ternary operator
+    // ????
+
+    printf("The max is: %d\\n", max);
+    return 0;
+}`,
+  language: "c",
+  options: [
+    "max = (x < y) ? x : y;",
+    "max = (x > y) ? x : y;",
+    "max = (x == y) ? x : y;",
+    "max = (x > y) ? y : x;"
+  ],
+  correctAnswer: 1,
+  explanation: "The correct ternary expression to get maximum is (x > y) ? x : y."
+},
+{
+  id: 88,
+  question: "Which of the following best describes a Lambda Function in C++?",
+  code: ``,
+  language: "cpp",
+  options: [
+    "A function that can only be used inside main()",
+    "A special function used only for recursion",
+    "A function without a name, defined inline, often used for short and simple operations",
+    "A function that must always return void"
+  ],
+  correctAnswer: 2,
+  explanation: "Lambda functions are anonymous functions defined inline for short operations."
+},
+{
+  id: 89,
+  question: "What will the following C++ code print?",
+  code: `#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 10;
+    int y = 20;
+    int z = (x++, y++, x + y);
+
+    cout << z;
+    return 0;
+}`,
+  language: "cpp",
+  options: [
+    "30",
+    "31",
+    "32",
+    "33"
+  ],
+  correctAnswer: 2,
+  explanation: "x is incremented to 11, y is incremented to 21, so x + y = 32."
+},
+{
+  id: 90,
+  question: "Which of the following is true about arrays in C++?",
+  code: ``,
+  language: "cpp",
+  options: [
+    "Arrays can be assigned directly using = operator",
+    "Array size must be a constant expression at compile time",
+    "Arrays automatically resize when elements are added",
+    "Array index can be negative"
+  ],
+  correctAnswer: 1,
+  explanation: "In C++, array sizes must be constant expressions at compile time."
+},
+{
+  id: 91,
+  question: "Which of the following is the correct way to declare a reference in C++?",
+  code: ``,
+  language: "cpp",
+  options: [
+    "int ref = &x;",
+    "int &ref = x;",
+    "int *ref = x;",
+    "ref int = x;"
+  ],
+  correctAnswer: 1,
+  explanation: "The correct syntax to declare a reference is int &ref = x."
+},
+{
+  id: 92,
+  question: "What will the following C++ code print?",
+  code: `#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 5, b = 10;
+    int result = (a > b) ? a : b;
+    cout << result;
+    return 0;
+}`,
+  language: "cpp",
+  options: [
+    "5",
+    "10",
+    "15",
+    "0"
+  ],
+  correctAnswer: 1,
+  explanation: "Since b > a, the ternary operator returns b, which is 10."
 }
 ];
 
 export const examConfig = {
   title: " Loops / Arrays / Strings ",
-  duration: 60, // minutes
+  duration: 100, // minutes
   totalQuestions: examQuestions.length,
   passingScore: 60 // percentage
 };
