@@ -11,423 +11,429 @@ export interface Question {
 export const examQuestions: Question[] = [
   {
   id: 1,
-  question: "Which feature of C++ allows the same function name to have different implementations?",
+  question: "Which SQL statement is used to select all columns from the table employees?",
+  code: ``,
+  language: "",
   options: [
-    "a) Inheritance",
-    "b) Polymorphism",
-    "c) Encapsulation",
-    "d) Abstraction"
+    "SELECT ALL FROM employees;",
+    "SELECT * FROM employees;",
+    "SELECT employees;",
+    "SELECT # FROM employees;"
   ],
   correctAnswer: 1,
-  explanation: "Polymorphism allows functions with the same name to behave differently."
+  explanation: "The correct syntax to select all columns is SELECT * FROM table_name."
 },
 {
   id: 2,
-  question: "In C++, which keyword is used to define a class?",
+  question: "Which query selects employees with a salary greater than 5000?",
+  code: ``,
+  language: "",
   options: [
-    "a) struct",
-    "b) class",
-    "c) object",
-    "d) new"
+    "SELECT * FROM employees WHERE salary = 5000;",
+    "SELECT * FROM employees WHERE salary > 5000;",
+    "SELECT * FROM employees IF salary > 5000;",
+    "SELECT * FROM employees HAVING salary > 5000;"
   ],
   correctAnswer: 1,
-  explanation: "The 'class' keyword is used to define a class in C++."
+  explanation: "The WHERE clause is used to filter rows based on conditions like salary > 5000."
 },
 {
   id: 3,
-  question: "Which of the following is not a type of inheritance in C++?",
+  question: "How do you sort employees by name in ascending order?",
+  code: ``,
+  language: "",
   options: [
-    "a) Single",
-    "b) Multiple",
-    "c) Hierarchical",
-    "d) Static"
+    "SELECT * FROM employees ORDER BY name ASC;",
+    "SELECT * FROM employees SORT BY name;",
+    "SELECT * FROM employees ORDER name ASC;",
+    "SELECT * FROM employees GROUP BY name ASC;"
   ],
-  correctAnswer: 3,
-  explanation: "Static is not a type of inheritance in C++."
+  correctAnswer: 0,
+  explanation: "ORDER BY column ASC sorts the result in ascending order."
 },
 {
   id: 4,
-  question: "What is the default access specifier for members of a class in C++?",
+  question: "What does the DISTINCT keyword do?",
+  code: ``,
+  language: "",
   options: [
-    "a) public",
-    "b) private",
-    "c) protected",
-    "d) friend"
+    "Returns all rows including duplicates",
+    "Returns only unique rows",
+    "Deletes duplicate rows",
+    "Groups rows"
   ],
   correctAnswer: 1,
-  explanation: "By default, class members are private in C++."
+  explanation: "DISTINCT ensures only unique rows are returned."
 },
 {
   id: 5,
-  question: "Which C++ concept allows hiding internal details and showing only functionalities?",
+  question: "Which function calculates the average salary?",
+  code: ``,
+  language: "",
   options: [
-    "a) Polymorphism",
-    "b) Abstraction",
-    "c) Encapsulation",
-    "d) Inheritance"
+    "SUM(salary)",
+    "AVG(salary)",
+    "MAX(salary)",
+    "COUNT(salary)"
   ],
   correctAnswer: 1,
-  explanation: "Abstraction hides internal implementation and exposes only functionality."
+  explanation: "AVG() function returns the average of the specified column."
 },
 {
   id: 6,
-  question: "What will this code print?",
-  code: `#include<iostream>
-using namespace std;
-class A {
-public:
-    void show() { cout << "A"; }
-};
-int main() {
-    A obj;
-    obj.show();
-    return 0;
-}`,
-  language: "cpp",
+  question: "To find the number of employees in each department:",
+  code: ``,
+  language: "",
   options: [
-    "a) A",
-    "b) obj",
-    "c) Compilation error",
-    "d) Nothing"
+    "SELECT department, COUNT() FROM employees;",
+    "SELECT department, COUNT() FROM employees GROUP BY department;",
+    "SELECT COUNT() FROM employees GROUP BY department;",
+    "SELECT department, COUNT() GROUP BY employees;"
   ],
-  correctAnswer: 0,
-  explanation: "The show() function prints 'A'."
+  correctAnswer: 1,
+  explanation: "GROUP BY groups rows and COUNT() counts rows in each group."
 },
 {
   id: 7,
-  question: "Which of these is a correct way to create an object of class Car?",
+  question: "Which query finds departments with more than 10 employees?",
+  code: ``,
+  language: "",
   options: [
-    "a) Car c;",
-    "b) object c(Car);",
-    "c) Car *c = new Car();",
-    "d) Both a & c"
+    "SELECT department, COUNT() FROM employees WHERE COUNT() > 10;",
+    "SELECT department, COUNT() FROM employees HAVING COUNT() > 10 GROUP BY department;",
+    "SELECT department, COUNT() FROM employees GROUP BY department HAVING COUNT() > 10;",
+    "SELECT department, COUNT() FROM employees GROUP BY department WHERE COUNT() > 10;"
   ],
-  correctAnswer: 3,
-  explanation: "Objects can be created on the stack (Car c;) or dynamically using new (Car *c = new Car())."
+  correctAnswer: 2,
+  explanation: "HAVING is used with GROUP BY to filter groups based on aggregate conditions."
 },
 {
   id: 8,
-  question: "What is the output of the following code?",
-  code: `#include<iostream>
-using namespace std;
-class B {
-    int x;
-public:
-    B() { x=5; }
-    void print() { cout << x; }
-};
-int main() {
-    B obj;
-    obj.print();
-}`,
-  language: "cpp",
+  question: "Which is correct to add a new employee?",
+  code: ``,
+  language: "",
   options: [
-    "a) 0",
-    "b) 5",
-    "c) Garbage value",
-    "d) Compilation error"
+    "INSERT INTO employees VALUES (101, 'Ali', 3000);",
+    "ADD INTO employees VALUES (101, 'Ali', 3000);",
+    "INSERT employees VALUES (101, 'Ali', 3000);",
+    "CREATE INTO employees VALUES (101, 'Ali', 3000);"
   ],
-  correctAnswer: 1,
-  explanation: "The constructor initializes x to 5, so print() outputs 5."
+  correctAnswer: 0,
+  explanation: "The correct syntax is INSERT INTO table_name VALUES (...)."
 },
 {
   id: 9,
-  question: "Which of the following defines function overloading?",
+  question: "How to increase all salaries by 10%?",
+  code: ``,
+  language: "",
   options: [
-    "a) Multiple functions with the same name but different parameters",
-    "b) Multiple functions with the same name and same parameters",
-    "c) Overriding a function in derived class",
-    "d) Calling a function from different objects"
+    "UPDATE employees SET salary = salary * 1.1;",
+    "UPDATE employees ADD salary * 0.1;",
+    "MODIFY employees SET salary = salary + 10%;",
+    "UPDATE employees SET salary += 10%;"
   ],
   correctAnswer: 0,
-  explanation: "Function overloading means functions with same name but different parameter lists."
+  explanation: "Multiplying salary by 1.1 increases it by 10%."
 },
 {
   id: 10,
-  question: "Which C++ keyword is used to inherit a class?",
+  question: "Delete all employees in department 5:",
+  code: ``,
+  language: "",
   options: [
-    "a) extends",
-    "b) inherit",
-    "c) :",
-    "d) ->"
+    "DELETE employees WHERE department = 5;",
+    "DELETE FROM employees WHERE department = 5;",
+    "REMOVE FROM employees WHERE department = 5;",
+    "DELETE * FROM employees WHERE department = 5;"
   ],
-  correctAnswer: 2,
-  explanation: "The ':' symbol is used to specify inheritance in C++."
+  correctAnswer: 1,
+  explanation: "DELETE FROM table WHERE condition deletes rows matching the condition."
 },
 {
   id: 11,
-  question: "What is the default inheritance type in C++ class?",
+  question: "Which query selects employees and their department names?",
+  code: ``,
+  language: "",
   options: [
-    "a) public",
-    "b) private",
-    "c) protected",
-    "d) None"
+    "SELECT * FROM employees JOIN departments ON employees.dep_id = departments.id;",
+    "SELECT * FROM employees INNER JOIN departments;",
+    "SELECT * FROM employees CROSS JOIN departments;",
+    "SELECT * FROM employees FULL JOIN departments;"
   ],
-  correctAnswer: 1,
-  explanation: "By default, inheritance in classes is private."
+  correctAnswer: 0,
+  explanation: "JOIN with ON condition matches employees with their departments."
 },
 {
   id: 12,
-  question: "Which of the following is true about a constructor?",
+  question: "Returns all employees and department names (NULL if no department):",
+  code: ``,
+  language: "",
   options: [
-    "a) Returns int",
-    "b) Has the same name as class",
-    "c) Must have return type",
-    "d) Can be virtual"
+    "LEFT JOIN",
+    "RIGHT JOIN",
+    "INNER JOIN",
+    "CROSS JOIN"
   ],
-  correctAnswer: 1,
-  explanation: "Constructors have the same name as the class and no return type."
+  correctAnswer: 0,
+  explanation: "LEFT JOIN returns all rows from the left table and matching rows from the right."
 },
 {
   id: 13,
-  question: "Which of the following is a destructor syntax?",
+  question: "Select employees earning more than the average salary:",
+  code: ``,
+  language: "",
   options: [
-    "a) ~ClassName()",
-    "b) ClassName~()",
-    "c) delete ClassName()",
-    "d) ClassName()"
+    "SELECT * FROM employees WHERE salary > SELECT AVG(salary) FROM employees;",
+    "SELECT * FROM employees WHERE salary > (SELECT AVG(salary) FROM employees);",
+    "SELECT * FROM employees WHERE salary > AVG(salary);",
+    "SELECT * FROM employees WHERE salary > SUM(salary)/COUNT(*);"
   ],
-  correctAnswer: 0,
-  explanation: "Destructor syntax is '~ClassName()'."
+  correctAnswer: 1,
+  explanation: "A subquery in parentheses is required for comparing with AVG()."
 },
 {
   id: 14,
-  question: "What is the output of the following code?",
-  code: `#include<iostream>
-using namespace std;
-class X {
-public:
-    void f() { cout << "X"; }
-};
-class Y : public X {
-public:
-    void f() { cout << "Y"; }
-};
-int main() {
-    Y obj;
-    obj.f();
-}`,
-  language: "cpp",
+  question: "Select employees whose name starts with ‘A’:",
+  code: ``,
+  language: "",
   options: [
-    "a) X",
-    "b) Y",
-    "c) XY",
-    "d) Compilation error"
+    "SELECT * FROM employees WHERE name LIKE 'A%';",
+    "SELECT * FROM employees WHERE name LIKE '%A';",
+    "SELECT * FROM employees WHERE name LIKE '%A%';",
+    "SELECT * FROM employees WHERE name = 'A%';"
   ],
-  correctAnswer: 1,
-  explanation: "The function f() is redefined in class Y, so it prints 'Y'."
+  correctAnswer: 0,
+  explanation: "LIKE 'A%' matches names beginning with A."
 },
 {
   id: 15,
-  question: "What is operator overloading?",
+  question: "Select employees in departments 1, 2, or 3:",
+  code: ``,
+  language: "",
   options: [
-    "a) Giving a new name to operators",
-    "b) Using operators to perform tasks on user-defined types",
-    "c) Using operators in loops",
-    "d) Redefining built-in operators only for integers"
+    "SELECT * FROM employees WHERE department IN (1,2,3);",
+    "SELECT * FROM employees WHERE department = (1,2,3);",
+    "SELECT * FROM employees WHERE department = IN (1,2,3);",
+    "SELECT * FROM employees WHERE department BETWEEN 1 AND 3;"
   ],
-  correctAnswer: 1,
-  explanation: "Operator overloading allows operators to work with user-defined types."
+  correctAnswer: 0,
+  explanation: "IN (1,2,3) matches any of the listed values."
 },
 {
   id: 16,
-  question: "Which keyword is used to define a member function outside the class?",
+  question: "Select employees NOT in departments 1 and 2:",
+  code: ``,
+  language: "",
   options: [
-    "a) friend",
-    "b) ::",
-    "c) this",
-    "d) inline"
+    "SELECT * FROM employees WHERE department NOT IN (1,2);",
+    "SELECT * FROM employees WHERE department != IN (1,2);",
+    "SELECT * FROM employees WHERE department <> (1,2);",
+    "SELECT * FROM employees WHERE department NOT = (1,2);"
   ],
-  correctAnswer: 1,
-  explanation: "The scope resolution operator '::' is used to define class functions outside."
+  correctAnswer: 0,
+  explanation: "NOT IN excludes the specified values."
 },
 {
   id: 17,
-  question: "Which of the following is true about virtual functions?",
+  question: "Select employees with salary between 2000 and 5000:",
+  code: ``,
+  language: "",
   options: [
-    "a) They allow compile-time polymorphism",
-    "b) They allow run-time polymorphism",
-    "c) They are faster than normal functions",
-    "d) They can only be used in C"
+    "SELECT * FROM employees WHERE salary >= 2000 AND salary <= 5000;",
+    "SELECT * FROM employees WHERE salary BETWEEN 2000 AND 5000;",
+    "SELECT * FROM employees WHERE salary = 2000 TO 5000;",
+    "Both a & b"
   ],
-  correctAnswer: 1,
-  explanation: "Virtual functions enable runtime polymorphism through dynamic binding."
+  correctAnswer: 3,
+  explanation: "Both salary BETWEEN and explicit >= and <= conditions are valid."
 },
 {
   id: 18,
-  question: "In C++, an abstract class is defined by having at least:",
+  question: "Select employees with no department assigned:",
+  code: ``,
+  language: "",
   options: [
-    "a) One constructor",
-    "b) One virtual function",
-    "c) One pure virtual function",
-    "d) One friend function"
+    "SELECT * FROM employees WHERE department = NULL;",
+    "SELECT * FROM employees WHERE department IS NULL;",
+    "SELECT * FROM employees WHERE department = 'NULL';",
+    "SELECT * FROM employees WHERE department IS EMPTY;"
   ],
-  correctAnswer: 2,
-  explanation: "An abstract class must have at least one pure virtual function."
+  correctAnswer: 1,
+  explanation: "IS NULL is the correct way to check for NULL values."
 },
 {
   id: 19,
-  question: "Which of the following is correct pure virtual function declaration?",
+  question: "Select employees with a department:",
+  code: ``,
+  language: "",
   options: [
-    "a) virtual void f() = 0;",
-    "b) void f() = 0;",
-    "c) virtual void f();",
-    "d) virtual void f() {};"
+    "SELECT * FROM employees WHERE department IS NOT NULL;",
+    "SELECT * FROM employees WHERE department != NULL;",
+    "SELECT * FROM employees WHERE department <> NULL;",
+    "SELECT * FROM employees WHERE department = NOT NULL;"
   ],
   correctAnswer: 0,
-  explanation: "The correct syntax is 'virtual void f() = 0;'."
+  explanation: "IS NOT NULL checks for values that are not NULL."
 },
 {
   id: 20,
-  question: "What is the size of an empty class in C++?",
+  question: "Which query gives emp_name as an alias for name?",
+  code: ``,
+  language: "",
   options: [
-    "a) 0 bytes",
-    "b) 1 byte",
-    "c) Depends on compiler",
-    "d) 2 bytes"
+    "SELECT name AS emp_name FROM employees;",
+    "SELECT name TO emp_name FROM employees;",
+    "SELECT name emp_name FROM employees;",
+    "SELECT name ALIAS emp_name FROM employees;"
   ],
-  correctAnswer: 1,
-  explanation: "Empty classes occupy 1 byte to ensure unique object addresses."
+  correctAnswer: 0,
+  explanation: "AS keyword assigns an alias to a column."
 },
 {
   id: 21,
-  question: "Which of the following is true about friend functions?",
+  question: "Which column ensures unique values and no NULLs?",
+  code: ``,
+  language: "",
   options: [
-    "a) Can access private members",
-    "b) Must be inside the class",
-    "c) Cannot access protected members",
-    "d) Can be inherited"
+    "FOREIGN KEY",
+    "PRIMARY KEY",
+    "UNIQUE",
+    "CHECK"
   ],
-  correctAnswer: 0,
-  explanation: "Friend functions can access private and protected members of a class."
+  correctAnswer: 1,
+  explanation: "PRIMARY KEY enforces uniqueness and not null constraint."
 },
 {
   id: 22,
-  question: "Which of the following is not allowed in C++?",
+  question: "Which defines a link to another table?",
+  code: ``,
+  language: "",
   options: [
-    "a) Multiple inheritance",
-    "b) Operator overloading",
-    "c) Private constructors",
-    "d) Using goto"
+    "PRIMARY KEY",
+    "FOREIGN KEY",
+    "UNIQUE",
+    "DEFAULT"
   ],
-  correctAnswer: 3,
-  explanation: "All listed features are allowed in C++, but 'goto' is discouraged though still valid."
+  correctAnswer: 1,
+  explanation: "FOREIGN KEY establishes a relationship between two tables."
 },
 {
   id: 23,
-  question: "What is encapsulation?",
+  question: "Which ensures column values are unique but allows NULLs?",
+  code: ``,
+  language: "",
   options: [
-    "a) Wrapping data and functions together",
-    "b) Writing multiple functions with same name",
-    "c) Creating an abstract class",
-    "d) Using virtual functions"
+    "PRIMARY KEY",
+    "FOREIGN KEY",
+    "UNIQUE",
+    "CHECK"
   ],
-  correctAnswer: 0,
-  explanation: "Encapsulation means combining data and methods that operate on it in one unit."
+  correctAnswer: 2,
+  explanation: "UNIQUE ensures all values are different but permits NULLs."
 },
 {
   id: 24,
-  question: "Which of the following is a benefit of inheritance?",
+  question: "Which ensures salary > 0?",
+  code: ``,
+  language: "",
   options: [
-    "a) Code reusability",
-    "b) Memory saving",
-    "c) Faster compilation",
-    "d) Reduced data types"
+    "CHECK(salary > 0)",
+    "CONSTRAINT(salary > 0)",
+    "UNIQUE(salary > 0)",
+    "VALIDATE(salary > 0)"
   ],
   correctAnswer: 0,
-  explanation: "Inheritance allows code reuse in derived classes."
+  explanation: "CHECK enforces conditions on column values."
 },
 {
   id: 25,
-  question: "What will this code output?",
-  code: `#include<iostream>
-using namespace std;
-class A {
-public:
-    virtual void f() { cout << "A"; }
-};
-class B : public A {
-public:
-    void f() { cout << "B"; }
-};
-int main() {
-    A *ptr = new B();
-    ptr->f();
-}`,
-  language: "cpp",
+  question: "Set default salary to 3000:",
+  code: ``,
+  language: "",
   options: [
-    "a) A",
-    "b) B",
-    "c) Compilation error",
-    "d) Runtime error"
+    "salary DEFAULT 3000",
+    "salary SET 3000",
+    "salary ASSIGN 3000",
+    "salary INIT 3000"
   ],
-  correctAnswer: 1,
-  explanation: "Virtual function ensures runtime polymorphism, so 'B' is printed."
+  correctAnswer: 0,
+  explanation: "DEFAULT sets a default value when none is provided."
 },
 {
   id: 26,
-  question: "Which of the following is true for C structs vs C++ classes?",
+  question: "Which returns the number of rows?",
+  code: ``,
+  language: "",
   options: [
-    "a) Structs can have functions in C",
-    "b) In C++, structs have default private members",
-    "c) In C++, structs have default public members",
-    "d) Classes and structs are identical"
+    "SUM()",
+    "AVG()",
+    "COUNT()",
+    "MAX()"
   ],
   correctAnswer: 2,
-  explanation: "In C++, struct members are public by default, unlike class members which are private."
+  explanation: "COUNT() function returns the number of rows."
 },
 {
   id: 27,
-  question: "Which C++ concept is a mix of data hiding and interface creation?",
+  question: "Concatenate first and last name:",
+  code: ``,
+  language: "",
   options: [
-    "a) Abstraction",
-    "b) Encapsulation",
-    "c) Polymorphism",
-    "d) Inheritance"
+    "SELECT first_name + last_name FROM employees;",
+    "SELECT CONCAT(first_name, last_name) FROM employees;",
+    "SELECT first_name & last_name FROM employees;",
+    "SELECT MERGE(first_name, last_name) FROM employees;"
   ],
-  correctAnswer: 0,
-  explanation: "Abstraction hides implementation details while exposing an interface."
+  correctAnswer: 1,
+  explanation: "CONCAT() joins multiple strings together."
 },
 {
   id: 28,
-  question: "Which of the following is a way to achieve polymorphism?",
+  question: "Which is correct single-line comment?",
+  code: ``,
+  language: "",
   options: [
-    "a) Function overloading",
-    "b) Operator overloading",
-    "c) Virtual functions",
-    "d) All of the above"
+    "-- This is a comment",
+    "/* This is a comment */",
+    "# This is a comment",
+    "All of the above"
   ],
   correctAnswer: 3,
-  explanation: "Polymorphism can be achieved through function overloading, operator overloading, and virtual functions."
+  explanation: "SQL supports --, /* */, and # for comments."
 },
 {
   id: 29,
-  question: "Which of these cannot be inherited?",
+  question: "% in LIKE represents:",
+  code: ``,
+  language: "",
   options: [
-    "a) Private members",
-    "b) Public members",
-    "c) Protected members",
-    "d) Constructors"
+    "Single character",
+    "Any number of characters",
+    "Only digits",
+    "Nothing"
   ],
-  correctAnswer: 3,
-  explanation: "Constructors are not inherited in C++."
+  correctAnswer: 1,
+  explanation: "In LIKE, % matches zero or more characters."
 },
 {
   id: 30,
-  question: "Which of the following is true about C++ objects?",
+  question: "Which method prevents SQL injection?",
+  code: ``,
+  language: "",
   options: [
-    "a) Object stores only data",
-    "b) Object stores only functions",
-    "c) Object stores both data and functions",
-    "d) Object cannot store data"
+    "Use parameterized queries",
+    "Use string concatenation",
+    "Use dynamic SQL",
+    "Allow direct user input"
   ],
-  correctAnswer: 2,
-  explanation: "Objects encapsulate both data and methods that operate on that data."
+  correctAnswer: 0,
+  explanation: "Parameterized queries safely handle user input to prevent SQL injection."
 }
+
 ];
 
 export const examConfig = {
-  title: "  OOP (C++ & C)  ",
+  title: "  SQL  ",
   duration: 30, // minutes
   totalQuestions: examQuestions.length,
   passingScore: 60 // percentage
